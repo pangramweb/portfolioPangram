@@ -201,7 +201,7 @@ body{
 }*/
 
 h2, #deux, #trois {
-    animation-duration: 1400ms;
+    animation-duration: 2300ms;
     animation-name: slidein;
     animation-timing-function: ease-in-out;
   }
@@ -282,7 +282,7 @@ h2, #deux, #trois {
 }
 
 header {
-    animation-duration: 2800ms;
+    animation-duration: 2700ms;
     animation-name: hslidein;
     animation-timing-function: ease-in-out;
   }
@@ -290,31 +290,33 @@ header {
   @keyframes hslidein {
     from {
         opacity: 0;
-        margin-top: -100px;
+        transform: translate(0px, -100px);
     }
-    75% {
+    50% {
         opacity: 0;
         margin-top: -100px;
+        transform: translate(0px, -100px);
     }
   
     to {
         opacity: 1;
         margin-top: 0px;
+        transform: translate(0px, 0px);
     }
   }
-/*
+
   .section1 img {
-    animation-duration: 1600ms;
+    animation-duration: 2400ms;
     animation-name: islidein;
     animation-timing-function: ease-in-out;
-  }*/
+  }
   
   @keyframes islidein {
     from {
         opacity: 0;
 
     }
-    75% {
+    50% {
         opacity: 0;
 
     }
@@ -351,7 +353,7 @@ header {
         opacity: 0;
         margin-bottom: -100px;
     }
-    75% {
+    50% {
         opacity: 0;
         margin-bottom: -100px;
     }

@@ -273,8 +273,8 @@ body {
     z-index: 999;
 }*/
 h2, #deux, #trois {
-  -webkit-animation-duration: 1400ms;
-          animation-duration: 1400ms;
+  -webkit-animation-duration: 2300ms;
+          animation-duration: 2300ms;
   -webkit-animation-name: slidein;
           animation-name: slidein;
   -webkit-animation-timing-function: ease-in-out;
@@ -378,8 +378,8 @@ a:hover {
 }
 
 header {
-  -webkit-animation-duration: 2800ms;
-          animation-duration: 2800ms;
+  -webkit-animation-duration: 2700ms;
+          animation-duration: 2700ms;
   -webkit-animation-name: hslidein;
           animation-name: hslidein;
   -webkit-animation-timing-function: ease-in-out;
@@ -389,55 +389,69 @@ header {
 @-webkit-keyframes hslidein {
   from {
     opacity: 0;
-    margin-top: -100px;
+    -webkit-transform: translate(0px, -100px);
+            transform: translate(0px, -100px);
   }
-  75% {
+  50% {
     opacity: 0;
     margin-top: -100px;
+    -webkit-transform: translate(0px, -100px);
+            transform: translate(0px, -100px);
   }
   to {
     opacity: 1;
     margin-top: 0px;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
 @keyframes hslidein {
   from {
     opacity: 0;
-    margin-top: -100px;
+    -webkit-transform: translate(0px, -100px);
+            transform: translate(0px, -100px);
   }
-  75% {
+  50% {
     opacity: 0;
     margin-top: -100px;
+    -webkit-transform: translate(0px, -100px);
+            transform: translate(0px, -100px);
   }
   to {
     opacity: 1;
     margin-top: 0px;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
-/*
-  .section1 img {
-    animation-duration: 1600ms;
-    animation-name: islidein;
-    animation-timing-function: ease-in-out;
-  }*/
+.section1 img {
+  -webkit-animation-duration: 2400ms;
+          animation-duration: 2400ms;
+  -webkit-animation-name: islidein;
+          animation-name: islidein;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
 @-webkit-keyframes islidein {
   from {
     opacity: 0;
   }
-  75% {
+  50% {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
 }
+
 @keyframes islidein {
   from {
     opacity: 0;
   }
-  75% {
+  50% {
     opacity: 0;
   }
   to {
@@ -475,7 +489,7 @@ header {
     opacity: 0;
     margin-bottom: -100px;
   }
-  75% {
+  50% {
     opacity: 0;
     margin-bottom: -100px;
   }
@@ -490,7 +504,7 @@ header {
     opacity: 0;
     margin-bottom: -100px;
   }
-  75% {
+  50% {
     opacity: 0;
     margin-bottom: -100px;
   }
