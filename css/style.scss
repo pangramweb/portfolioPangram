@@ -144,7 +144,7 @@ body{
 }
 
 .section1 .text{
-    height:85px;
+    height:75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,8 +373,8 @@ header {
     .section1 h2{
         font-family: 'roslindale';
         font-weight: 400;
-        font-size: 2rem;
-        line-height: 2.2rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
         z-index: 2;
         position: relative;
         margin: 0;
@@ -387,8 +387,8 @@ header {
     .section1 p{
         font-family: 'roslindale';
         font-weight: 400;
-        font-size: 2rem;
-        line-height: 2.2rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
         z-index: 2;
         position: relative;
         padding: 0!important;
@@ -397,7 +397,7 @@ header {
     }
 
     .section1 .text{
-        height:40px;
+        height:30px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -414,6 +414,10 @@ header {
 
     .palme{
         padding-bottom: 40px;
+    }
+
+    #quatre{
+        font-size: 12px;
     }
   }
 
