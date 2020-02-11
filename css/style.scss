@@ -201,7 +201,7 @@ body{
 }*/
 
 h2, #deux, #trois {
-    animation-duration: 2300ms;
+    animation-duration: 2800ms;
     animation-name: slidein;
     animation-timing-function: ease-in-out;
   }
@@ -221,7 +221,7 @@ h2, #deux, #trois {
         margin-top: 100px;
     }
   
-    50%{
+    75%{
         opacity: 0;
         margin-top: 100px;
     }
@@ -282,7 +282,7 @@ h2, #deux, #trois {
 }
 
 header {
-    animation-duration: 2700ms;
+    animation-duration: 2900ms;
     animation-name: hslidein;
     animation-timing-function: ease-in-out;
   }
@@ -292,7 +292,7 @@ header {
         opacity: 0;
         transform: translate(0px, -100px);
     }
-    50% {
+    75% {
         opacity: 0;
         margin-top: -100px;
         transform: translate(0px, -100px);
@@ -306,7 +306,7 @@ header {
   }
 
   .section1 img {
-    animation-duration: 2400ms;
+    animation-duration: 2900ms;
     animation-name: islidein;
     animation-timing-function: ease-in-out;
   }
@@ -316,7 +316,7 @@ header {
         opacity: 0;
 
     }
-    50% {
+    75% {
         opacity: 0;
 
     }
@@ -342,7 +342,7 @@ header {
     font-size: 16px;
     line-height: 20px;
     color: rgb(150, 150, 150);
-    animation-duration: 2400ms;
+    animation-duration: 2900ms;
     animation-name: fslidein;
     animation-timing-function: ease-in-out;
     font-weight: 100;
@@ -353,7 +353,7 @@ header {
         opacity: 0;
         margin-bottom: -100px;
     }
-    50% {
+    75% {
         opacity: 0;
         margin-bottom: -100px;
     }
