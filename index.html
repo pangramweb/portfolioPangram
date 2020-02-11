@@ -6,7 +6,15 @@
     <title>Pangram — webdesign</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="is-loading">
+
+    <div id="preloader">
+        <div class="txt">
+            <p class="txt-perc">0%</p>
+            <div class="progress"><span></span></div>
+        </div>
+    </div>
+
     <header class="header">
         <div class="header--left">
             <a href="https://www.instagram.com/jb.minier/">Instagram</a>
@@ -29,7 +37,7 @@
 
     <div id="wrapper">
         <div class="section" id="one">
-            <div class="section-background"></div>
+            <div class="section-background bcg"></div>
             <div class="section1">
                 <div class="text rellax" data-rellax-speed="-4" id="text1" data-rellax-zindex="2">
                     <h2>LOGO® — PUBLICITÉ</h2>
@@ -54,6 +62,16 @@
 -->
     </div>
     
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
     <script src="/js/rellax.js"></script>
     </script>
 
@@ -61,6 +79,68 @@
       var rellax = new Rellax('.rellax', {
         wrapper: '#wrapper'
     });
+    </script>
+
+    <script type="text/javascript">
+        // number of loaded images for preloader progress
+var loadedCount = 0; //current number of images loaded
+var imagesToLoad = $('.bcg').length; //number of slides with .bcg container
+var loadingProgress = 0; //timeline progress - starts at 0
+ 
+$('.bcg').imagesLoaded({
+    background: true
+}).progress( function( instance, image ) {
+    loadProgress();
+});
+ 
+function loadProgress(imgLoad, image)
+{
+    //one more image has been loaded
+    loadedCount++;
+ 
+    loadingProgress = (loadedCount/imagesToLoad);
+ 
+    // GSAP tween of our progress bar timeline
+    TweenLite.to(progressTl, 0.7, {progress:loadingProgress, ease:Linear.easeNone});
+ 
+}
+
+//progress timeline
+var progressTl = new TimelineMax({
+    paused: true,
+    onUpdate: progressUpdate,
+    onComplete: loadComplete
+});
+ 
+progressTl
+    //tween the progress bar width
+    .to($('.progress span'), 1, {width:100, ease:Linear.easeNone});
+ 
+//as the progress bar width updates and grows we put the percentage loaded in the screen
+function progressUpdate()
+{
+    //the percentage loaded based on the tween's progress
+    loadingProgress = Math.round(progressTl.progress() * 100);
+ 
+    //we put the percentage in the screen
+    $(".txt-perc").text(loadingProgress + '%');
+ 
+}
+
+function loadComplete() {
+ 
+ // preloader out
+ var preloaderOutTl = new TimelineMax();
+
+ preloaderOutTl
+     .to($('.progress'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn})
+     .to($('.txt-perc'), 0.3, {y: 100, autoAlpha: 0, ease:Back.easeIn}, 0.1)
+     .set($('body'), {className: '-=is-loading'})
+     .set($('#wrapper'), {className: '+=is-loaded'})
+     .to($('#preloader'), 0.7, {yPercent: 100, ease:Power4.easeInOut})
+     .set($('#preloader'), {className: '+=is-hidden'})
+ return preloaderOutTl;
+}
     </script>
 </body>
 </html>
