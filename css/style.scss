@@ -351,16 +351,16 @@ header {
   @keyframes fslidein {
     from {
         opacity: 0;
-        margin-bottom: -100px;
+        transform: translate(0px, 100px);
     }
     75% {
         opacity: 0;
-        margin-bottom: -100px;
+        transform: translate(0px, 100px);
     }
   
     to {
-        opacity: 1Ò;
-        margin-bottom: 0px;
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
   }
 
@@ -405,7 +405,7 @@ header {
     }
 
     .section1 img{
-        width:350px;
+        width:250px;
         margin-top: 20px;
         z-index: 1;
         /*transition-duration: 250ms;
