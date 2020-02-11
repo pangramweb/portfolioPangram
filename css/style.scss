@@ -144,16 +144,19 @@ body{
 }
 
 .section1 .text{
-    height:75px;
+    height:2.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
 }
 
-.section1 h2{
-    font-family: 'roslindale';
-    font-weight: 400;
+#text3{
+    height: auto;
+    overflow: visible;
+}
+#text3 h2{
+    font-family: 'respira';
     font-size: 4.7rem;
     line-height: 5.4rem;
     z-index: 2;
@@ -168,8 +171,8 @@ body{
 .section1 p{
     font-family: 'roslindale';
     font-weight: 400;
-    font-size: 4.7rem;
-    line-height: 5.4rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
     z-index: 2;
     position: relative;
     padding: 0!important;
@@ -188,17 +191,10 @@ body{
 }
 
 .section1 img{
-    width:350px;
-    margin-top: -20px;
+    width:300px;
     z-index: 1;
-    /*transition-duration: 250ms;
-    transition-timing-function: ease-in-out;*/
+    margin-top: -30px;
 }
-/*
-.section1 img:hover{
-    transform: scale(1.2);
-    z-index: 999;
-}*/
 
 h2, #deux, #trois {
     animation-duration: 2800ms;
@@ -211,7 +207,7 @@ h2, #deux, #trois {
 }
 
 #trois{
-    animation-delay: 200ms;
+    animation-delay: 100ms;
 }
 
   
@@ -412,7 +408,7 @@ header {
 
     .section1 img{
         width:250px;
-        margin-top: 20px;
+        margin-top: -30px;
         z-index: 1;
         /*transition-duration: 250ms;
         transition-timing-function: ease-in-out;*/
