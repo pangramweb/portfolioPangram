@@ -598,6 +598,10 @@ header {
 }
 
 @media only screen and (max-width: 990px) {
+  body {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
   .section {
     display: -webkit-box;
     display: -ms-flexbox;
