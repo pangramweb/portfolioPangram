@@ -414,12 +414,12 @@ header {
         transition-timing-function: ease-in-out;*/
     }
 
-    .palme{
-        padding-bottom: 40px;
-    }
-
     #quatre{
         font-size: 12px;
+    }
+
+    #text3 h2{
+        line-height: 4.9rem;
     }
   }
 
@@ -428,25 +428,9 @@ header {
       width: 100%;
       height: 100%;
       text-align: center;
-  }
-
-    .section2>div{
-    height:100%;
-    }
-
-  .section2 h2{
-      color:white;
-      font-family: respira;
-      font-size: 102px;
-      margin-block-start: 0px;
-      line-height: 110px;
-  }
-
-  .palme{
-      width: 100px;
-      position: relative;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
   #one {
@@ -479,4 +463,8 @@ header {
     opacity: 0;
     display: none;
     }
+}
+
+.progress{
+    background-color: white;
 }
