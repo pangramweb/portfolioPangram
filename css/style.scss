@@ -86,7 +86,6 @@ body{
 
 .section{
     width: 100%;
-    height: 100%;
     position: relative;
     display: flex;/* change to block to scroll mode*/
     justify-content: center;
@@ -107,7 +106,7 @@ body{
         background-size: cover;
         will-change: transform; // creates a new paint layer
         z-index: -2;
-        &:after{
+        /*&:after{
             animation: grain 8s steps(10) infinite;
             background-image: url("/img/paper_1_@2X.png");
             content: "";
@@ -117,7 +116,7 @@ body{
             position: fixed;
             top: -100%;
             width: 400%;
-        }
+        }*/
     }
 
 
@@ -139,7 +138,12 @@ body{
     text-align: center;
     font-size: 2em;
     font-family: 'roslindale';
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
+    margin-bottom: 150px;
     /*padding-top: 150px;*/ /* Change to 150 when section is in scroll mode*/
 }
 
@@ -154,11 +158,12 @@ body{
 #text3{
     height: auto;
     overflow: visible;
+    width: 70%;
 }
 #text3 h2{
     font-family: 'respira';
-    font-size: 4.7rem;
-    line-height: 5.4rem;
+    font-size: 6rem;
+    line-height: 6.4rem;
     z-index: 2;
     position: relative;
     margin: 0;
@@ -180,6 +185,43 @@ body{
     margin-block-end: 0;
 }
 
+#bouton1{
+    position: relative;
+    height:100px;
+    width: 100px;
+    top:-200px;
+    left:220px;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    .bouton-container{
+        height: 100%;
+        width: 100%;
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        @keyframes spin { 
+            from { 
+                transform: rotate(0deg); 
+            } to { 
+                transform: rotate(360deg); 
+            }
+        }
+    }
+    .bouton1{
+        height:100%;
+        width: 100%;
+    }
+    p{
+        position: absolute;
+        z-index: 10;
+        font-size: 16px;
+    }
+}
+
 .text{
     box-sizing: border-box;
     overflow: hidden;
@@ -190,8 +232,8 @@ body{
     font-family: 'roslindale-ital';
 }
 
-.section1 img{
-    width:300px;
+#text3 img{
+    width:32%;
     z-index: 1;
     margin-top: -30px;
 }
@@ -269,8 +311,8 @@ h2, #deux, #trois {
   #logo{
     /*color:rgb(255, 225, 213);*/
     color: #AC856D;
-    font-family: respira;
-    font-size: 32px;
+    font-family: Roslindale;
+    font-size: 28px;
     font-weight: 400;
     opacity: 1;
     text-transform: none;
@@ -408,10 +450,14 @@ header {
 
     .section1 img{
         width:250px;
-        margin-top: -30px;
         z-index: 1;
         /*transition-duration: 250ms;
         transition-timing-function: ease-in-out;*/
+    }
+
+    #bouton1{
+        left:0px;
+        top:0px;
     }
 
     #quatre{

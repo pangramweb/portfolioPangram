@@ -3,6 +3,8 @@ form{
   font-family: Roslindale;
   color:darkgrey;
   width:100%;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 label{
@@ -24,6 +26,7 @@ input, textarea{
   border:none;
   outline: none;
   font-size: 90px;
+  cursor: pointer;
 }
 
 textarea{
@@ -78,4 +81,5 @@ textarea:hover::placeholder{
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
+  cursor: pointer;
 }
