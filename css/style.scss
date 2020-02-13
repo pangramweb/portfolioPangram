@@ -260,20 +260,12 @@ body{
     width:26%;
 }
 
-h2, #deux, #trois {
+h2, #deux, #trois, #cinq {
     animation-duration: 2800ms;
     animation-name: slidein;
     animation-timing-function: ease-in-out;
+    animation-delay: 200ms;
   }
-
-#deux{
-    animation-delay: 100ms;
-}
-
-#trois{
-    animation-delay: 100ms;
-}
-
   
   @keyframes slidein {
     from {
@@ -443,7 +435,7 @@ header {
           flex-direction: column;
       }
     .section1 h2{
-        font-family: 'roslindale';
+        font-family: 'respira';
         font-weight: 400;
         font-size: 1.8rem;
         line-height: 2rem;
@@ -457,8 +449,6 @@ header {
     }
     
     .section1 p{
-        font-family: 'roslindale';
-        font-weight: 400;
         font-size: 1.8rem;
         line-height: 2rem;
         z-index: 2;
@@ -497,8 +487,29 @@ header {
     #text3{
         margin-top: 40px;
     }
-  }
 
+    #deux{
+        text-align: center;
+    }
+
+    #text1{
+        position: relative!important;
+        top:-100px!important;
+        left:0px!important;
+    }
+    #text2{
+        position: relative!important;
+        top:-100px!important;
+        left:0px!important;
+    }
+    
+    #text4{
+        position: relative!important;
+        top:-100px!important;
+        left:0px!important;
+    }
+  }
+/*fin query*/
 
   .section2{
       width: 100%;
