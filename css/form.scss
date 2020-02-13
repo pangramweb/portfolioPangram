@@ -101,4 +101,9 @@ textarea:hover::placeholder{
   input, textarea{
     font-size: 40px;
   }
+
+  .input:hover::placeholder,
+  textarea:hover::placeholder{
+    font-size: 40px;
+  }
 }
