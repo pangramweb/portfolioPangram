@@ -2,6 +2,7 @@ $backgroundColor1: rgb(10, 10, 10);
 $backgroundColor2: rgb(255, 210, 210);
 $textColorLight:#fff;
 $menu-link:#fff;
+$headerText: #E0E0E0;
 
 html{
     overscroll-behavior: none;
@@ -84,6 +85,20 @@ body{
 
 }
 
+@font-face {
+    font-family: 'helvetica-medium';
+    src: url('/fonts/HelveticaNeue\ Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica';
+    src: url('/fonts/HelveticaNeue.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .section{
     width: 100%;
     position: relative;
@@ -106,31 +121,33 @@ body{
         background-size: cover;
         will-change: transform; // creates a new paint layer
         z-index: -2;
-        /*&:after{
-            animation: grain 8s steps(10) infinite;
-            background-image: url("/img/paper_1_@2X.png");
+        &:after{
+            background-image: url("/img/flammarion.png");
             content: "";
-            height: 400%;
-            left: -50%;
-            opacity: 0.01;
+            background-position: center;
+            background-size: contain;
             position: fixed;
-            top: -100%;
-            width: 400%;
-        }*/
+            height:100%;
+            width: 100%;
+            animation-duration: 2800ms;
+            animation-name: zoomOut;
+            animation-timing-function: ease-in-out;
+        }
     }
 
-
-    @keyframes grain {
-        0%, 100% { transform:translate(0, 0) }
-        10% { transform:translate(-5%, -10%) }
-        20% { transform:translate(-15%, 5%) }
-        30% { transform:translate(7%, -25%) }
-        40% { transform:translate(-5%, 10%) }
-        50% { transform:translate(-15%, 10%) }
-        60% { transform:translate(1%, 0%) }
-        70% { transform:translate(0%, 15%) }
-        80% { transform:translate(3%, 15%) }
-        90% { transform:translate(-10%, 10%) }
+    @keyframes zoomOut {
+        from {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+        50% {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
       }
 
 .section1{
@@ -142,9 +159,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 130px;
+    margin-top: 150px;
     margin-bottom: 150px;
-    /*padding-top: 150px;*/ /* Change to 150 when section is in scroll mode*/
 }
 
 .section1 .text{
@@ -174,7 +190,7 @@ body{
 }
 
 .section1 p{
-    font-family: 'roslindale';
+    font-family: 'helvetica';
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 2rem;
@@ -238,6 +254,10 @@ body{
     margin-top: -30px;
 }
 
+.young{
+    width:26%;
+}
+
 h2, #deux, #trois {
     animation-duration: 2800ms;
     animation-name: slidein;
@@ -272,27 +292,26 @@ h2, #deux, #trois {
 
   .header{
       width:100vw;
-      height:60px;
+      height:40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: fixed;
-      z-index: 3;
+      z-index: 999;
   }
 
   .header--logo{
       position: absolute;
       left:50%;
       transform: translate(-50%, 0);
-      padding-top: 6px;
   }
 
   .header--left a, .header--right a{
-      font-family: Manrope;
-      font-size: 16px;
+      font-family: helvetica-medium;
+      font-size: 20px;
       text-transform: uppercase;
       text-decoration: none;
-      color:rgb(134, 134, 134);
+      color:$headerText;
       font-weight: 400;
   }
 
@@ -310,12 +329,12 @@ h2, #deux, #trois {
 
   #logo{
     /*color:rgb(255, 225, 213);*/
-    color: #AC856D;
-    font-family: Roslindale;
-    font-size: 28px;
+    color: $headerText;
+    font-family: helvetica-medium;
+    font-size: 20px;
     font-weight: 400;
     opacity: 1;
-    text-transform: none;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
@@ -405,6 +424,7 @@ header {
   #two{
       background-color: pink;
       background-color: black;
+      z-index: 9;
   }
 
   @media only screen and (max-width: 990px) {
@@ -478,7 +498,7 @@ header {
 
   .section2{
       width: 100%;
-      height: 100%;
+      height: 100vh;
       text-align: center;
       display: flex;
       justify-content: center;
@@ -508,7 +528,7 @@ header {
       align-items: center;
       color:white;
       font-size: 40px;
-      font-family: respira;
+      font-family: helvetica;
       background-color: black;
     &.is-hidden {
     visibility: hidden;
@@ -519,4 +539,17 @@ header {
 
 .progress{
     background-color: white;
+}
+
+#text1, #text2, #text4{
+    position: absolute;
+    left:20%;
+    top:500px;
+}
+#text2{
+    top:530px;
+}
+
+#text4{
+    top:560px;
 }
