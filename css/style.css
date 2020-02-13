@@ -113,7 +113,8 @@ body {
   background-image: url("/img/flammarion.png");
   content: "";
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: fixed;
   height: 100%;
   width: 100%;
