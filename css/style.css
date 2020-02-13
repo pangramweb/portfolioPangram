@@ -637,13 +637,16 @@ header {
   }
   #bouton1 {
     left: 0px;
-    top: 0px;
+    top: 80px;
   }
   #quatre {
     font-size: 12px;
   }
   #text3 h2 {
     line-height: 4.9rem;
+  }
+  #text3 {
+    margin-top: 40px;
   }
 }
 
