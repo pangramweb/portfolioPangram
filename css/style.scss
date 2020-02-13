@@ -479,8 +479,6 @@ header {
     .section1 img{
         width:250px;
         z-index: 1;
-        /*transition-duration: 250ms;
-        transition-timing-function: ease-in-out;*/
     }
 
     #bouton1{
@@ -558,4 +556,5 @@ header {
 
 #two{
     overflow-x: hidden;
+    overscroll-behavior: none;
 }
