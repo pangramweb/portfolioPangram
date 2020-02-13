@@ -723,6 +723,6 @@ header {
 }
 
 #two {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */
