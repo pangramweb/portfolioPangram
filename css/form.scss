@@ -86,8 +86,6 @@ textarea:hover::placeholder{
 
 @media only screen and (max-width: 990px) {
   ::placeholder{
-    font-family: respira;
-    color:rgb(46, 46, 46);
     font-size: 40px;
   }
   
@@ -107,5 +105,9 @@ textarea:hover::placeholder{
 
   label{
     height:50px;
+  }
+
+  textarea:focus::placeholder{
+    font-size: 40px;
   }
 }

@@ -146,23 +146,15 @@ textarea:hover::placeholder {
 
 @media only screen and (max-width: 990px) {
   ::-webkit-input-placeholder {
-    font-family: respira;
-    color: #2e2e2e;
     font-size: 40px;
   }
   :-ms-input-placeholder {
-    font-family: respira;
-    color: #2e2e2e;
     font-size: 40px;
   }
   ::-ms-input-placeholder {
-    font-family: respira;
-    color: #2e2e2e;
     font-size: 40px;
   }
   ::placeholder {
-    font-family: respira;
-    color: #2e2e2e;
     font-size: 40px;
   }
   input[type=text]:focus,
@@ -190,6 +182,18 @@ textarea:hover::placeholder {
   }
   label {
     height: 50px;
+  }
+  textarea:focus::-webkit-input-placeholder {
+    font-size: 40px;
+  }
+  textarea:focus:-ms-input-placeholder {
+    font-size: 40px;
+  }
+  textarea:focus::-ms-input-placeholder {
+    font-size: 40px;
+  }
+  textarea:focus::placeholder {
+    font-size: 40px;
   }
 }
 /*# sourceMappingURL=form.css.map */
