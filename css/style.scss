@@ -26,8 +26,9 @@ body{
     padding: 0;
     overscroll-behavior: none;
     position: relative;
-    overflow: hidden;
 
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .is-loading {
