@@ -93,8 +93,6 @@ textarea:hover::placeholder{
   
   input[type=text]:focus,
   input[type=email]:focus{
-    color:white;
-    font-family: respira;
     font-size: 40px;
   }
 
@@ -105,5 +103,9 @@ textarea:hover::placeholder{
   .input:hover::placeholder,
   textarea:hover::placeholder{
     font-size: 40px;
+  }
+
+  label{
+    height:50px;
   }
 }
