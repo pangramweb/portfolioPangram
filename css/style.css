@@ -24,8 +24,6 @@ body {
   padding: 0;
   overscroll-behavior: none;
   position: relative;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .is-loading {
@@ -92,7 +90,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   /*overflow: hidden;*/
-  overscroll-behavior: none;
 }
 
 .section-background {
@@ -382,7 +379,7 @@ h2, #deux, #trois, #cinq {
 }
 
 .header--left a, .header--right a {
-  font-family: helvetica-medium;
+  font-family: helvetica;
   font-size: 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -405,7 +402,7 @@ a:hover {
 #logo {
   /*color:rgb(255, 225, 213);*/
   color: #E0E0E0;
-  font-family: helvetica-medium;
+  font-family: helvetica;
   font-size: 20px;
   font-weight: 400;
   opacity: 1;
@@ -672,6 +669,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 #one .bcg {
@@ -733,7 +731,6 @@ header {
 }
 
 #two {
-  overflow-x: hidden;
-  overscroll-behavior: none;
+  overflow-x: visible;
 }
 /*# sourceMappingURL=style.css.map */
