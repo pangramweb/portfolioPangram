@@ -2,7 +2,7 @@ $backgroundColor1: rgb(10, 10, 10);
 $backgroundColor2: rgb(255, 210, 210);
 $textColorLight:#fff;
 $menu-link:#fff;
-$headerText: #E0E0E0;
+$headerText: #fff;
 
 
 
@@ -18,9 +18,8 @@ body{
     height: 100%;
     width: 100%;
     background:#000;
-    /*overscroll-behavior: none;*/
-    //overflow: hidden;
-
+    overscroll-behavior: none;
+    scrollbar-width: none;
 }
 
 @font-face {
@@ -50,35 +49,41 @@ body{
     font-style: normal;
 }
 
-
-/*header {
-    animation-duration: 2900ms;
-    animation-name: hslidein;
-    animation-timing-function: ease-in-out;
+@keyframes reveal {
+    0%   {opacity: 0;
+         transform: scale(1.1);   
     }
-  
-  @keyframes hslidein {
-    from {
-        opacity: 0;
-        transform: translate(0px, -100px);
+    25%  {opacity: 0;
+        transform: scale(1.1)
     }
-    75% {
-        opacity: 0;
-        margin-top: -100px;
-        transform: translate(0px, -100px);
+    50%  {opacity: 1;
+        transform: scale(1)
     }
-  
-    to {
-        opacity: 1;
-        margin-top: 0px;
-        transform: translate(0px, 0px);
+    100% {opacity: 1;
+        transform: scale(1)
     }
   }
-*/
+
+  @keyframes textreveal {
+    0%   {opacity: 0;
+        transform:translate(-50%, -60%);   
+    }
+    25%  {opacity: 0;
+        transform:translate(-50%, -60%);
+    }
+    50%  {opacity: 1;
+        transform:translate(-50%, -50%);
+    }
+    100% {opacity: 1;
+        transform:translate(-50%, -50%);
+    }
+  }
+
 #logo{
     /*color:rgb(255, 225, 213);*/
     color: $headerText;
     font-family: helvetica;
+    color:white;
     font-size: 20px;
     font-weight: 400;
     opacity: 1;
@@ -102,6 +107,7 @@ body{
     justify-content: space-between;
     position: fixed;
     z-index: 999;
+    top:0px;
 }
 
 .header--logo{
@@ -120,31 +126,35 @@ body{
 }
 
 .intro {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 3;
     font-family: "Monument Extended";
     font-size: 45px;
     text-transform: uppercase;
     color: white;
     z-index: 2;
+    animation-name: textreveal;
+    animation-duration: 4s;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 
 .container {
-    position: absolute;
+    position: relative;
     width: 100vw;
-    height: 100vh;
-    margin-top: -4%;
+    height:100vh;
+    margin-top: 0px;
+    animation-name: reveal;
+    animation-duration: 4s;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .row {
     display: flex;
     justify-content: space-around;
-    margin: 1em 0;
-    &::hover{
-        cursor: url("../img/cursor.png"), auto !important;
-    }
 }
 
 .block {
@@ -152,15 +162,19 @@ body{
     height: 230px;
     background: grey;
     margin: .5em;
-    filter: grayscale(.8);
-    opacity: .7;
+    filter: grayscale(.1);
+    opacity: .2;
     transition: .5s;
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(0.9);
+            cursor: pointer;
+            //cursor: url("../img/cursor.png"), auto !important;
+        }
 }
 
-.block:hover {
-    filter: grayscale(0);
-    opacity: 1;
-}
+
 
 .block-1 {
     background: url("../img/Desktop\ HD\ Copy\ 15.jpg") no-repeat 50% 50%;
@@ -225,10 +239,10 @@ body{
 
 .form{
     position: relative;
-    height: 100vh;
+    height: 630px;
     width: 100vw;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+.input{
+    font-family: helvetica;
 }

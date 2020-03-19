@@ -1,10 +1,23 @@
 form {
   background-color: black;
-  font-family: Roslindale;
-  color: darkgrey;
+  font-family: helvetica;
+  color: blue;
   width: 100%;
   margin-top: 150px;
   margin-bottom: 150px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 label {
@@ -21,21 +34,23 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100px;
+  height: 50px;
+  width: 300px;
+  border-radius: 4px;
 }
 
 input, textarea {
-  width: 80%;
+  width: 298px;
   height: 100px;
-  background-color: #000;
+  border: 1px solid #e7e7e7;
+  border-radius: 2px;
+  background-color: #1b1b1b;
   text-align: center;
   line-height: 100%;
-  font-family: respira;
-  color: #2e2e2e;
-  border: none;
   outline: none;
-  font-size: 90px;
+  font-size: 20px;
   cursor: pointer;
+  color: white;
 }
 
 textarea {
@@ -43,6 +58,7 @@ textarea {
   overflow: hidden;
   min-height: 100px;
   max-height: 200px;
+  padding-top: 10px;
 }
 
 .message {
@@ -51,149 +67,138 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  font-family: respira;
-  color: #2e2e2e;
-  font-size: 90px;
+  font-family: helvetica;
+  color: #4b4b4b;
+  font-size: 20px;
 }
 
 :-ms-input-placeholder {
-  font-family: respira;
-  color: #2e2e2e;
-  font-size: 90px;
+  font-family: helvetica;
+  color: #4b4b4b;
+  font-size: 20px;
 }
 
 ::-ms-input-placeholder {
-  font-family: respira;
-  color: #2e2e2e;
-  font-size: 90px;
+  font-family: helvetica;
+  color: #4b4b4b;
+  font-size: 20px;
 }
 
 ::placeholder {
-  font-family: respira;
-  color: #2e2e2e;
-  font-size: 90px;
+  font-family: helvetica;
+  color: #4b4b4b;
+  font-size: 20px;
 }
 
 input[type=text]:focus,
 input[type=email]:focus {
   color: white;
-  font-family: respira;
-  font-size: 90px;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 textarea:focus {
   color: white;
-  font-family: respira;
-  font-size: 30px;
-}
-
-textarea:focus::-webkit-input-placeholder {
-  padding-top: 30px;
-}
-
-textarea:focus:-ms-input-placeholder {
-  padding-top: 30px;
-}
-
-textarea:focus::-ms-input-placeholder {
-  padding-top: 30px;
-}
-
-textarea:focus::placeholder {
-  padding-top: 30px;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 .input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
-  color: white;
-  font-family: respira;
-  font-size: 90px;
+  color: #646464;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 .input:hover:-ms-input-placeholder,
 textarea:hover:-ms-input-placeholder {
-  color: white;
-  font-family: respira;
-  font-size: 90px;
+  color: #646464;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 .input:hover::-ms-input-placeholder,
 textarea:hover::-ms-input-placeholder {
-  color: white;
-  font-family: respira;
-  font-size: 90px;
+  color: #646464;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 .input:hover::placeholder,
 textarea:hover::placeholder {
-  color: white;
-  font-family: respira;
-  font-size: 90px;
+  color: #646464;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 .submit {
-  background-color: black;
-  border: solid 2px white;
+  background-color: rgba(99, 59, 245, 0.8);
+  border: solid 0px white;
   padding: 10px 18px;
   color: white;
-  border-radius: 5px;
-  font-family: Manrope;
+  border-radius: 2px;
+  font-family: helvetica;
   font-size: 14px;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 0px;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+.submit:hover {
+  background-color: #633bf5;
 }
 
 @media only screen and (max-width: 990px) {
   ::-webkit-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   :-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   ::-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   ::placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   input[type=text]:focus,
   input[type=email]:focus {
-    font-size: 40px;
+    font-size: 20px;
   }
   input, textarea {
-    font-size: 40px;
+    font-size: 20px;
   }
   .input:hover::-webkit-input-placeholder,
   textarea:hover::-webkit-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   .input:hover:-ms-input-placeholder,
   textarea:hover:-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   .input:hover::-ms-input-placeholder,
   textarea:hover::-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   .input:hover::placeholder,
   textarea:hover::placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   label {
-    height: 50px;
+    height: 60px;
   }
   textarea:focus::-webkit-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   textarea:focus:-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   textarea:focus::-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
   textarea:focus::placeholder {
-    font-size: 40px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=form.css.map */
