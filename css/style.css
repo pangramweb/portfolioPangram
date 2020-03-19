@@ -1,4 +1,3 @@
-@charset "UTF-8";
 ::-webkit-scrollbar {
   display: none;
 }
@@ -80,8 +79,9 @@ body {
 @-webkit-keyframes textreveal {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    position: fixed;
   }
   25% {
     opacity: 1;
@@ -101,8 +101,9 @@ body {
 @keyframes textreveal {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    position: fixed;
   }
   25% {
     opacity: 1;
@@ -173,10 +174,10 @@ body {
 }
 
 .intro {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   font-family: "Monument Extended";
-  font-size: 45px;
+  font-size: 60px;
   text-transform: uppercase;
   color: white;
   z-index: 2;
@@ -188,6 +189,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  opacity: 1;
+  text-align: center;
 }
 
 h1 {
@@ -200,7 +203,7 @@ h1 {
 .container {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   margin-top: 0px;
   -webkit-animation-name: reveal;
           animation-name: reveal;
@@ -224,18 +227,22 @@ h1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  text-align: center;
 }
 
 .block {
-  width: 500px;
-  height: 230px;
+  width: 33%;
+  padding-bottom: 25%;
   background: grey;
-  margin: .5em;
   -webkit-filter: grayscale(0.1);
           filter: grayscale(0.1);
   opacity: .2;
   -webkit-transition: .5s;
   transition: .5s;
+  background-position: top !important;
+  margin: 0 2% -2% 2%;
+  position: relative;
+  float: left;
 }
 
 .block:hover {
@@ -248,62 +255,62 @@ h1 {
 }
 
 .block-1 {
-  background: url("../img/Desktop HD Copy 15.jpg") no-repeat 50% 50%;
+  background: url("../img/Newseum.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-2 {
-  background: url("../img/Laurel—Skull.png") no-repeat 50% 50%;
+  background: url("../img/Architexture.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-3 {
-  background: url("../img/Desktop HD Copy 11.png") no-repeat 50% 50%;
+  background: url("../img/LGSL.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-4 {
-  background: url("../img/synesthesia-green 2.png") no-repeat 50% 50%;
+  background: url("../img/LGSL2.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-5 {
-  background: url("../img/Valise—MJ—Light.png") no-repeat 50% 50%;
+  background: url("../img/Pangram.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-6 {
-  background: url("../img/pangram-phone-mockup.png") no-repeat 50% 50%;
+  background: url("../img/Portail.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-7 {
-  background: url("../img/Desktop HD Copy 3.png") no-repeat 50% 50%;
+  background: url("../img/Pangram2.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-8 {
-  background: url("../img/Desktop HD Copy.png") no-repeat 50% 50%;
+  background: url("../img/Portail2.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-9 {
-  background: url("../img/LGSL.jpg") no-repeat 50% 50%;
+  background: url("../img/Skull.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-10 {
-  background: url("../img/portail2.jpg") no-repeat 50% 50%;
+  background: url("../img/Synesthesia.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-11 {
-  background: url("../img/pangram3.jpg") no-repeat 50% 50%;
+  background: url("../img/pangram3.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
 .block-12 {
-  background: url("../img/Artboard 2.png") no-repeat 50% 50%;
+  background: url("../img/Skull Copy.jpg") no-repeat 100% 100%;
   background-size: contain;
 }
 
@@ -363,6 +370,11 @@ h2 {
 
 p {
   color: white;
+}
+
+.palme {
+  margin-top: 50px;
+  height: 50px;
 }
 
 .pres {
