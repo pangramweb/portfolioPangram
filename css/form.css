@@ -1,0 +1,199 @@
+form {
+  background-color: black;
+  font-family: Roslindale;
+  color: darkgrey;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100px;
+}
+
+input, textarea {
+  width: 80%;
+  height: 100px;
+  background-color: #000;
+  text-align: center;
+  line-height: 100%;
+  font-family: respira;
+  color: #2e2e2e;
+  border: none;
+  outline: none;
+  font-size: 90px;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.message {
+  height: auto;
+  max-height: 200px;
+}
+
+::-webkit-input-placeholder {
+  font-family: respira;
+  color: #2e2e2e;
+  font-size: 90px;
+}
+
+:-ms-input-placeholder {
+  font-family: respira;
+  color: #2e2e2e;
+  font-size: 90px;
+}
+
+::-ms-input-placeholder {
+  font-family: respira;
+  color: #2e2e2e;
+  font-size: 90px;
+}
+
+::placeholder {
+  font-family: respira;
+  color: #2e2e2e;
+  font-size: 90px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus {
+  color: white;
+  font-family: respira;
+  font-size: 90px;
+}
+
+textarea:focus {
+  color: white;
+  font-family: respira;
+  font-size: 30px;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  padding-top: 30px;
+}
+
+textarea:focus:-ms-input-placeholder {
+  padding-top: 30px;
+}
+
+textarea:focus::-ms-input-placeholder {
+  padding-top: 30px;
+}
+
+textarea:focus::placeholder {
+  padding-top: 30px;
+}
+
+.input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+  color: white;
+  font-family: respira;
+  font-size: 90px;
+}
+
+.input:hover:-ms-input-placeholder,
+textarea:hover:-ms-input-placeholder {
+  color: white;
+  font-family: respira;
+  font-size: 90px;
+}
+
+.input:hover::-ms-input-placeholder,
+textarea:hover::-ms-input-placeholder {
+  color: white;
+  font-family: respira;
+  font-size: 90px;
+}
+
+.input:hover::placeholder,
+textarea:hover::placeholder {
+  color: white;
+  font-family: respira;
+  font-size: 90px;
+}
+
+.submit {
+  background-color: black;
+  border: solid 2px white;
+  padding: 10px 18px;
+  color: white;
+  border-radius: 5px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 990px) {
+  ::-webkit-input-placeholder {
+    font-size: 40px;
+  }
+  :-ms-input-placeholder {
+    font-size: 40px;
+  }
+  ::-ms-input-placeholder {
+    font-size: 40px;
+  }
+  ::placeholder {
+    font-size: 40px;
+  }
+  input[type=text]:focus,
+  input[type=email]:focus {
+    font-size: 40px;
+  }
+  input, textarea {
+    font-size: 40px;
+  }
+  .input:hover::-webkit-input-placeholder,
+  textarea:hover::-webkit-input-placeholder {
+    font-size: 40px;
+  }
+  .input:hover:-ms-input-placeholder,
+  textarea:hover:-ms-input-placeholder {
+    font-size: 40px;
+  }
+  .input:hover::-ms-input-placeholder,
+  textarea:hover::-ms-input-placeholder {
+    font-size: 40px;
+  }
+  .input:hover::placeholder,
+  textarea:hover::placeholder {
+    font-size: 40px;
+  }
+  label {
+    height: 50px;
+  }
+  textarea:focus::-webkit-input-placeholder {
+    font-size: 40px;
+  }
+  textarea:focus:-ms-input-placeholder {
+    font-size: 40px;
+  }
+  textarea:focus::-ms-input-placeholder {
+    font-size: 40px;
+  }
+  textarea:focus::placeholder {
+    font-size: 40px;
+  }
+}
+/*# sourceMappingURL=form.css.map */
