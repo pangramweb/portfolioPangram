@@ -16,7 +16,7 @@
         </div>
 
         <div class="header--logo">
-            <a href="#" id="logo">Pangram'20</a>
+            <a href="#" id="logo">Pangram</a>
         </div>
 
         <div class="header--right">
@@ -58,17 +58,18 @@
     <div class="section2">
 
         <h2>Graphic & Web design</h1>
+        <img src="/img/palme.png" alt="palme" class="palme">
         <p>Site Internet — UI/UX</p>
         <p>Logo©, Branding™</p>
         <p>Print, Artworks</p>
 
-        <img src="/img/palme.png" alt="palme" class="palme">
+
 
         <div class="pres">
-            <p>JE CRÉÉ VOTRE SITE INTERNET</p>
-            <p>BLOG, ECOMMERCE</p>
-            <p>LOGO, CARTE DE VISITE</p>
-            <p>MAQUETTE DE LIVRE…</p>
+            <p>Création de site internet</p>
+            <p>Blog, Ecommerce</p>
+            <p>Logo, Cartes de visite</p>
+            <p>Maquette de livre, affiches</p>
         </div>
     </div>
     
@@ -96,6 +97,9 @@
 <script>
     $(window).scroll(function(){
     $(".intro").css("opacity", 1 - $(window).scrollTop() / 500);
+  });
+    $(window).scroll(function(){
+    $(".block").css("opacity", 0 + $(window).scrollTop() / 250);
   });
 </script>
 </body>

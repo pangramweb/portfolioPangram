@@ -34,6 +34,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'telegraf';
+  src: url("../fonts/Telegraf-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @-webkit-keyframes reveal {
   0% {
     opacity: 0;
@@ -236,7 +243,7 @@ h1 {
   background: grey;
   -webkit-filter: grayscale(0.1);
           filter: grayscale(0.1);
-  opacity: .2;
+  opacity: .5;
   -webkit-transition: .5s;
   transition: .5s;
   background-position: top !important;
@@ -318,6 +325,7 @@ h1 {
   position: relative;
   height: 630px;
   width: 100vw;
+  margin-top: 100px;
 }
 
 .input {
@@ -363,9 +371,10 @@ h1 {
 h2 {
   padding-bottom: 30px;
   text-transform: uppercase;
-  font-family: helvetica-medium;
-  font-size: 40px;
-  color: white;
+  font-family: Monument Extended;
+  font-size: 80px;
+  color: black;
+  -webkit-text-stroke: 1px white;
 }
 
 p {
@@ -373,21 +382,19 @@ p {
 }
 
 .palme {
-  margin-top: 50px;
-  height: 50px;
+  margin-bottom: 10px;
+  height: 30px;
 }
 
 .pres {
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 62px;
+  line-height: 88px;
   margin-top: 50px;
   text-align: center;
   font-family: helvetica;
   z-index: 3;
-}
-
-.bg {
-  z-index: 0;
-  position: absolute;
+  width: 60%;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
