@@ -16,7 +16,7 @@
         </div>
 
         <div class="header--logo">
-            <a href="#" id="logo">𝕻𝖆𝖓𝖌𝖗𝖆𝖒☺︎</a>
+            <a href="#" id="logo">𝕻𝖆𝖓𝖌𝖗𝖆𝖒</a>
         </div>
 
         <div class="header--right">
@@ -24,7 +24,7 @@
         </div>
     </header>
 
-    <div class="intro"><h1>DESIGN DIGITAL</h1></div>
+    <div class="intro"><h1 id="intro">DESIGN </br>DIGITAL</h1></div>
 
     <div id="panzoom-wrap" class="container">
 
@@ -57,7 +57,7 @@
 
     <div class="section2">
 
-        <h2>Graphic & Web design</h1>
+        <h2 id="graphic">Graphic &</br>Web design</h2>
         <img src="/img/palme.png" alt="palme" class="palme">
         <p>Site Internet — UI/UX</p>
         <p>Logo©, Branding™</p>
@@ -90,7 +90,11 @@
         </div>
     </div>
 
-
+<script src="js/fitty.min.js"></script>
+<script>
+    fitty('#intro');
+    fitty('#graphic');
+</script>
 <script>
     $(window).scroll(function(){
     $(".intro").css("opacity", 1 - $(window).scrollTop() / 500);
