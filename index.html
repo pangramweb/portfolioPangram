@@ -57,7 +57,7 @@
 
     <div class="section2">
 
-        <h2 id="graphic">Graphic &</br>Web design</h2>
+        <h2 id="graphic" class="hidden">Graphic &</br>Web design</h2>
         <img src="/img/palme.png" alt="palme" class="palme">
         <p>Site Internet — UI/UX</p>
         <p>Logo©, Branding™</p>
@@ -66,7 +66,7 @@
 
 
         <div class="pres">
-            <p>Site internet, Blog, Ecommerce, Logo, Cartes de visite, Maquette de livre, affiches</p>
+            <p class="hidden">Site internet, Blog, Ecommerce, Logo, Cartes de visite, Maquette de livre, Affiches</p>
         </div>
     </div>
     
@@ -102,6 +102,35 @@
     $(window).scroll(function(){
     $(".block").css("opacity", 0 + $(window).scrollTop() / 250);
   });
+</script>
+<script>
+    (function() {
+  var elements;
+  var windowHeight;
+
+  function init() {
+    elements = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+  }
+
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add('fade-in-element');
+        element.classList.remove('hidden');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
+
+  init();
+  checkPosition();
+})();
 </script>
 </body>
 </html>
