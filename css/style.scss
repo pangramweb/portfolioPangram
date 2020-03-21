@@ -394,7 +394,35 @@ p{
     }
 
     .header--left a, .header--right a{
-        font-size: 18px;
+        font-size: 14px;
+    }
+
+    .sticker{
+        height:100px;
+        width: 100px;
+        bottom: 50px;
+    }
+    
+    .sticker-rond{
+        height:100px;
+        width: 100px;
+    }
+    .sticker-text{
+        height:100px;
+        width: 100px;
+    }
+
+    #logo{
+        font-size: 22px;
+        letter-spacing: -3px;
+    }
+    
+    .header--left{
+        margin-left:10px;
+    }
+    
+    .header--right{
+        margin-right: 10px;
     }
 
 }
