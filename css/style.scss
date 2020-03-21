@@ -10,7 +10,10 @@ $headerText: #fff;
     display: none;
   }
 
-
+html, 
+body {
+    overflow-x: hidden;
+}
 
 body{
     margin: 0;
@@ -18,7 +21,7 @@ body{
     height: 100%;
     width: 100%;
     background:#000;
-    overscroll-behavior: none;
+    //overscroll-behavior: none;
     scrollbar-width: none;
 }
 
@@ -66,25 +69,44 @@ body{
     }
   }
 
-  @keyframes textreveal {
+@keyframes textreveal {
     0%   {
         opacity: 0;
-        transform:translate(-50%, -50%);
-        position: fixed;
     }
-    25%  {
+    25%   {
+        opacity: 0;
+    }
+    50%   {
         opacity: 1;
-        transform:translate(-50%, -50%);
-
     }
-    75%  {opacity: 1;
-
+    100% {
+        opacity: 1;
     }
-    100% {opacity: 1;
-        transform:translate(-50%, -50%);
+}
 
+@keyframes menu {
+    0%   {
+        opacity: 0;
+        transform: translate(0, -100px);
     }
-  }
+    75% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes rotate{
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 #logo{
     /*color:rgb(255, 225, 213);*/
@@ -116,6 +138,8 @@ body{
     position: fixed;
     z-index: 999;
     top:10px;
+    animation-name: menu;
+    animation-duration: 2s;
 }
 
 .header--logo{
@@ -136,19 +160,21 @@ body{
 .intro {
     position: fixed;
     width: 100%;
+    height: 100vh;
     z-index: 3;
     text-transform: uppercase;
     color: white;
     z-index: 2;
     animation-name: textreveal;
     animation-duration: 2s;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
     opacity: 1;
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
         p{
             font-size: 60px;
             margin-block-start: 0;
@@ -164,6 +190,35 @@ h1{
     margin-block-end: 0;
     padding-left: 40px;
     padding-right: 40px;
+    animation-name: textreveal;
+    animation-duration: 2s;
+}
+
+.sticker{
+    height:150px;
+    width: 150px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+}
+
+.sticker-rond{
+    height:150px;
+    width: 150px;
+    position: absolute;
+    z-index: 3;
+}
+.sticker-text{
+    height:150px;
+    width: 150px;
+    position: absolute;
+    z-index: 4;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .container {
@@ -195,14 +250,6 @@ h1{
     margin: 0 2% -2% 2%;
     position: relative;
     float: left;
-/*        &:hover {
-            filter: grayscale(0);
-            opacity: 1;
-            transform: scale(0.9);
-            //cursor: pointer;
-            //cursor: url("../img/cursor.png"), auto !important;
-        }
-*/
 }
 
 .block-1 {
@@ -308,8 +355,8 @@ h2{
     text-align: center;
     color: black;
     -webkit-text-stroke: 1px bisque;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 p{

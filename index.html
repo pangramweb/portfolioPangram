@@ -24,7 +24,14 @@
         </div>
     </header>
 
-    <div class="intro"><h1 id="intro">DESIGN </br>DIGITAL</h1></div>
+    <div class="intro">
+        <h1 id="intro">DESIGN </br>DIGITAL</h1>
+        <div class="sticker">
+            <img src="/img/pastille.png" alt="pastille" class="sticker-rond">
+            <img src="/img/texte.png" alt="texte" class="sticker-text">
+        </div>
+    </div>
+
 
     <div id="panzoom-wrap" class="container">
 
@@ -66,7 +73,11 @@
 
 
         <div class="pres">
-            <p class="hidden">Site internet, Blog, Ecommerce, Logo, Cartes de visite, Maquette de livre, Affiches</p>
+            <p class="hidden">Site internet, Blog,</p>
+            <p class="hidden">Ecommerce, Logo,</p>
+            <p class="hidden">Cartes de visite,</p>
+            <p class="hidden">Maquettes de livres,</p>
+            <p class="hidden">Affiches</p>
         </div>
     </div>
     
@@ -75,16 +86,16 @@
         <div class="form--wrap">
             <form name="contact" method="POST" data-netlify="true">
                 <p>
-                  <label><input type="text" name="name" placeholder="Votre Nom*" class="input" required/></label>   
+                  <label class="hidden"><input type="text" name="name" placeholder="Votre Nom*" class="input" required/></label>   
                 </p>
                 <p>
-                  <label><input type="email" name="email" placeholder="Votre Email*" class="input" required/></label>
+                  <label class="hidden"><input type="email" name="email" placeholder="Votre Email*" class="input" required/></label>
                 </p>
                 <p>
-                  <label class="message"><textarea oninput="auto_grow(this)" name="message" placeholder="Votre Message*" required></textarea></label>
+                  <label class="message hidden"><textarea oninput="auto_grow(this)" name="message" placeholder="Votre Message*" required></textarea></label>
                 </p>
                 <p>
-                  <button class="submit" type="submit">Envoyer</button>
+                  <button class="submit hidden" type="submit">Envoyer</button>
                 </p> 
             </form>
         </div>
@@ -104,7 +115,7 @@
   });
 </script>
 <script>
-    (function() {
+(function() {
   var elements;
   var windowHeight;
 
