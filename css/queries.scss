@@ -1,4 +1,10 @@
 @media only screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+        height:100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
     .pres{
         font-size: 42px;
         line-height: 110px;
