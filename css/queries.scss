@@ -1,7 +1,10 @@
 @media only screen and (max-width: 600px) {
     html, body{
-        overflow-x: hidden;
         height: 80vh;
+    }
+
+    .intro, .container, .section2, .form{
+        overflow-x: hidden;
     }
 
     .pres{
