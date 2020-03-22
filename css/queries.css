@@ -1,4 +1,10 @@
 @media only screen and (max-width: 600px) {
+  html, body {
+    height: 100%;
+  }
+  .intro, .container, .section2, .form {
+    overflow-x: hidden;
+  }
   .pres {
     font-size: 42px;
     line-height: 110px;
@@ -27,6 +33,7 @@
   #logo {
     font-size: 14px;
     letter-spacing: 0px;
+    color: red;
   }
   .header--left {
     margin-left: 10px;
