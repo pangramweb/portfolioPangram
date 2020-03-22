@@ -20,6 +20,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 
 @font-face {
@@ -95,6 +96,8 @@ body {
 @-webkit-keyframes textreveal {
   0% {
     opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   25% {
     opacity: 0;
@@ -102,14 +105,22 @@ body {
   50% {
     opacity: 1;
   }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes textreveal {
   0% {
     opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   25% {
     opacity: 0;
@@ -117,8 +128,14 @@ body {
   50% {
     opacity: 1;
   }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -180,24 +197,40 @@ body {
   }
 }
 
-#logo {
-  font-family: helvetica;
-  color: white;
-  font-size: 28px;
-  font-weight: 400;
-  opacity: 1;
-  text-transform: uppercase;
-  text-decoration: none;
+/*Slide-in animation*/
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0px, 50px);
+            transform: translate(0px, 50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0px, 50px);
+            transform: translate(0px, 50px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.header--left {
-  margin-left: 30px;
+.fade-in-element {
+  -webkit-animation: fade-in 1.4s;
+          animation: fade-in 1.4s;
 }
 
-.header--right {
-  margin-right: 30px;
+.hidden {
+  opacity: 0;
+  -webkit-transform: translate(0px, 150px);
+          transform: translate(0px, 150px);
 }
 
+/*Slide-in animation end*/
 .header {
   width: 100vw;
   height: 40px;
@@ -217,6 +250,24 @@ body {
           animation-name: menu;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+}
+
+#logo {
+  font-family: helvetica;
+  color: white;
+  font-size: 28px;
+  font-weight: 400;
+  opacity: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header--left {
+  margin-left: 30px;
+}
+
+.header--right {
+  margin-right: 30px;
 }
 
 .header--logo {
@@ -243,10 +294,6 @@ body {
   text-transform: uppercase;
   color: white;
   z-index: 2;
-  -webkit-animation-name: textreveal;
-          animation-name: textreveal;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
   opacity: 1;
   text-align: center;
   -webkit-margin-before: 0;
@@ -276,6 +323,14 @@ body {
           margin-block-end: 0;
 }
 
+.intro > img {
+  width: 70%;
+  -webkit-animation-name: textreveal;
+          animation-name: textreveal;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
 h1 {
   font-family: "helvetica";
   text-transform: uppercase;
@@ -290,11 +345,12 @@ h1 {
           animation-name: textreveal;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  line-height: 80%;
 }
 
 .sticker {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,15 +365,15 @@ h1 {
 }
 
 .sticker-rond {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   z-index: 3;
 }
 
 .sticker-text {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   z-index: 4;
   -webkit-animation-name: rotate;
@@ -480,11 +536,18 @@ h1 {
 h2 {
   padding-bottom: 30px;
   text-transform: uppercase;
-  font-family: helvetica;
+  font-family: Monument;
   text-align: center;
   color: bisque;
+  color: black;
+  -webkit-text-stroke: 1px bisque;
   padding-left: 4%;
   padding-right: 4%;
+  line-height: 85%;
+}
+
+.section2 > .graphic {
+  width: 70%;
 }
 
 p {
@@ -498,82 +561,12 @@ p {
 }
 
 .pres {
-  font-size: 102px;
-  line-height: 170px;
+  font-size: 95px;
+  line-height: 200px;
   margin-top: 150px;
   text-align: left;
   font-family: telegraf;
   width: 80%;
-}
-
-@media only screen and (max-width: 990px) {
-  .pres {
-    font-size: 42px;
-    line-height: 110px;
-    margin-top: 150px;
-    text-align: left;
-    font-family: telegraf;
-    z-index: 3;
-    width: 80%;
-  }
-  .header--left a, .header--right a {
-    font-size: 14px;
-  }
-  .sticker {
-    height: 100px;
-    width: 100px;
-    bottom: 150px;
-  }
-  .sticker-rond {
-    height: 100px;
-    width: 100px;
-  }
-  .sticker-text {
-    height: 100px;
-    width: 100px;
-  }
-  #logo {
-    font-size: 14px;
-    letter-spacing: 0px;
-  }
-  .header--left {
-    margin-left: 10px;
-  }
-  .header--right {
-    margin-right: 10px;
-  }
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-    -webkit-transform: translate(0px, 50px);
-            transform: translate(0px, 50px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    -webkit-transform: translate(0px, 50px);
-            transform: translate(0px, 50px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in-element {
-  -webkit-animation: fade-in 1.4s;
-          animation: fade-in 1.4s;
-}
-
-.hidden {
-  opacity: 0;
-  -webkit-transform: translate(0px, 150px);
-          transform: translate(0px, 150px);
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
