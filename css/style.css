@@ -175,6 +175,42 @@ body {
   }
 }
 
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+  }
+  75% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+  }
+  75% {
+    opacity: 0;
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -250,6 +286,10 @@ body {
           animation-name: menu;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  mix-blend-mode: difference;
+  pointer-events: auto;
 }
 
 #logo {
@@ -329,6 +369,8 @@ body {
           animation-name: textreveal;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 h1 {
@@ -345,6 +387,8 @@ h1 {
           animation-name: textreveal;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   line-height: 80%;
 }
 
@@ -362,6 +406,12 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   bottom: 20px;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .sticker-rond {

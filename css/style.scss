@@ -106,6 +106,21 @@ body{
     }
 }
 
+@keyframes scroll {
+    0%   {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    75% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
 @keyframes rotate{
     0%   {
         transform: rotate(0deg);
@@ -142,6 +157,9 @@ body{
     top:10px;
     animation-name: menu;
     animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    mix-blend-mode: difference;
+    pointer-events: auto;
 }
  
 #logo{
@@ -204,6 +222,7 @@ body{
     width: 70%;
     animation-name: textreveal;
     animation-duration: 2s;
+    animation-timing-function: ease-in-out;
 }
 
 h1{
@@ -216,6 +235,7 @@ h1{
     padding-right: 40px;
     animation-name: textreveal;
     animation-duration: 2s;
+    animation-timing-function: ease-in-out;
     line-height: 80%;
 }
 
@@ -227,6 +247,9 @@ h1{
     align-items: center;
     justify-content: center;
     bottom: 20px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
 }
 
 .sticker-rond{
