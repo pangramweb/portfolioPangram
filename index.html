@@ -18,30 +18,30 @@
             <a href="https://www.instagram.com/pangram.design/">Instagram</a>
         </div>
 
-        <div class="header--logo">
-            <a href="#" id="logo">PANGRAM</a>
-        </div>
-
         <div class="header--right">
             <a href="#contact">Contact✌️</a>
         </div>
     </header>
 
-
-    <div class="intro">
-        <h1 id="intro">DESIGN </br>DIGITAL</h1>
-        <div class="sticker">
-            <img src="/img/pastille.webp" alt="pastille" class="sticker-rond">
-            <img src="/img/texte.webp" alt="texte" class="sticker-text">
-        </div>
+    <div class="section1">
+        <h1 id="intro"><span>DESIGN</span><span>DIGITAL</span></h1>
     </div>
 
     <div class="section2">
         <div class="display">
           <div class="display_img hidden">
-            <picture class="display_img-iphone hidden">
-              <source class="ftw" srcset="/img/iphone11—FTW.webp"/>
-              <img class="ftw" src="/img/iphone11—FTW.jp2" alt="ftw">
+            <picture class="display_img-iphone">
+              <!--<source class="ftw" srcset="/img/iphone11—FTW.webp"/>-->
+              <img class="ftw hidden" src="/img/iphone11—FTW.png" alt="ftw">
+            </picture>
+          </div>
+        </div>
+
+        <div class="display display2">
+          <div class="display_img hidden">
+            <picture class="display_img-ipad">
+              <!--<source class="ftw" srcset="/img/ipad—newseum.png"/>-->
+              <img class="ftw hidden" src="/img/ipad—newseum.png" alt="ftw">
             </picture>
           </div>
         </div>
@@ -63,7 +63,6 @@
         </div>
     </div>
     
-
     <div class="form" id="contact">
         <div class="form--wrap">
             <form name="contact" method="POST" data-netlify="true">
@@ -97,7 +96,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 </script>
 <script>
     $(window).scroll(function(){
-    $(".intro").css("opacity", 1 - $(window).scrollTop() / 500);
+    $(".section1").css("opacity", 1 - $(window).scrollTop() / 500);
   });
     $(window).scroll(function(){
     $(".block").css("opacity", 0 + $(window).scrollTop() / 250);
@@ -132,5 +131,6 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
   checkPosition();
 })();
 </script>
+
 </body>
 </html>
