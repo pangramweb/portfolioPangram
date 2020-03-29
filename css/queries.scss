@@ -40,18 +40,9 @@
         height:100px;
         width: 100px;
     }
-
-    #logo{
-        font-size: 14px;
-        letter-spacing: 0px;
-    }
     
-    .header--left{
-        margin-left:10px;
-    }
-    
-    .header--right{
-        margin-right: 10px;
+    .header--left, .header--right{
+        margin:0px 30px;
     }
 
 }
@@ -85,18 +76,9 @@
         height:100px;
         width: 100px;
     }
-
-    #logo{
-        font-size: 18px;
-        letter-spacing: 0px;
-    }
     
-    .header--left{
-        margin-left:10px;
-    }
-    
-    .header--right{
-        margin-right: 10px;
+    .header--left, .header--right{
+        margin:0px 30px;
     }
 
 }

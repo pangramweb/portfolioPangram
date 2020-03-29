@@ -43,8 +43,11 @@ label {
 input, textarea {
   width: 298px;
   height: 100px;
-  border: 1px solid #e7e7e7;
+  border: 2px solid #e7e7e7;
   border-radius: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   background-color: #1b1b1b;
   text-align: center;
   line-height: 100%;
