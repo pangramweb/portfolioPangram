@@ -31,22 +31,15 @@ body {
 }
 
 @font-face {
-  font-family: 'monument';
-  src: url("/fonts/MonumentExtended-Ultrabold.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'helvetica';
-  src: url("../fonts/NeueMachina-Regular.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'telegraf';
   src: url("../fonts/Telegraf-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cozi-azure';
+  src: url("../fonts/CosiAzure-Ultra.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -270,6 +263,7 @@ body {
 .header {
   width: 100vw;
   height: 40px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,24 +284,22 @@ body {
           animation-timing-function: ease-in-out;
   mix-blend-mode: difference;
   pointer-events: auto;
+  font-family: telegraf;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none !important;
 }
 
 #logo {
-  font-family: helvetica;
-  color: white;
-  font-size: 28px;
-  font-weight: 400;
-  opacity: 1;
-  text-transform: uppercase;
-  text-decoration: none;
+  display: none;
 }
 
 .header--left {
-  margin-left: 30px;
+  margin-left: 80px;
 }
 
 .header--right {
-  margin-right: 30px;
+  margin-right: 80px;
 }
 
 .header--logo {
@@ -315,15 +307,12 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+  text-decoration: none !important;
 }
 
 .header--left a, .header--right a {
-  font-family: helvetica;
-  font-size: 28px;
-  text-transform: uppercase;
-  text-decoration: none;
   color: #fff;
-  font-weight: 400;
+  text-decoration: none !important;
 }
 
 .intro {
@@ -374,7 +363,7 @@ body {
 }
 
 h1 {
-  font-family: "helvetica";
+  font-family: "cozi-azure";
   text-transform: uppercase;
   font-weight: 500;
   -webkit-margin-before: 0;
@@ -390,6 +379,8 @@ h1 {
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   line-height: 80%;
+  font-size: auto;
+  z-index: 2;
 }
 
 .sticker {
@@ -434,6 +425,56 @@ h1 {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+
+.display {
+  position: relative;
+  width: 100%;
+  height: 170vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.display .display_img {
+  width: 50%;
+  height: auto;
+}
+
+.display_img-iphone {
+  height: 100%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.ftw {
+  width: 100%;
+}
+
+.img_text {
+  width: 50vw;
+  height: 100%;
+}
+
+.img_text {
+  width: 50vw;
+  height: 100%;
 }
 
 .container {
@@ -546,7 +587,7 @@ h1 {
 }
 
 .input {
-  font-family: helvetica;
+  font-family: telegraf;
 }
 
 .section2 {
@@ -584,20 +625,16 @@ h1 {
 }
 
 h2 {
-  padding-bottom: 30px;
   text-transform: uppercase;
-  font-family: Monument;
+  font-family: telegraf;
   text-align: center;
-  color: bisque;
-  color: black;
-  -webkit-text-stroke: 1px bisque;
-  padding-left: 4%;
-  padding-right: 4%;
+  color: white;
   line-height: 85%;
+  font-size: 10vw;
 }
 
 .section2 > .graphic {
-  width: 70%;
+  width: 100%;
 }
 
 p {
@@ -607,6 +644,7 @@ p {
 
 .palme {
   margin-bottom: 10px;
+  margin-top: 30px;
   height: 30px;
 }
 
@@ -619,4 +657,4 @@ p {
   width: 80%;
   font-weight: 400;
 }
-/*# source MappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

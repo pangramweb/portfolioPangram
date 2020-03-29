@@ -1,0 +1,102 @@
+@media only screen and (max-width: 600px) {
+    html, body{
+        height: 100%;
+    }
+
+    .intro{
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .intro, .container, .section2, .form{
+        overflow-x: hidden;
+    }
+
+    .pres{
+        font-size: 42px;
+        line-height: 110px;
+        margin-top: 150px;
+        text-align: left;
+        font-family: telegraf;
+        z-index: 3;
+        width: 80%;
+    }
+
+    .header--left a, .header--right a{
+        font-size: 14px;
+    }
+
+    .sticker{
+        height:100px;
+        width: 100px;
+        bottom: 150px;
+    }
+    
+    .sticker-rond{
+        height:100px;
+        width: 100px;
+    }
+    .sticker-text{
+        height:100px;
+        width: 100px;
+    }
+
+    #logo{
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    
+    .header--left{
+        margin-left:10px;
+    }
+    
+    .header--right{
+        margin-right: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 990px) {
+    .pres{
+        font-size: 42px;
+        line-height: 110px;
+        margin-top: 150px;
+        text-align: left;
+        font-family: telegraf;
+        z-index: 3;
+        width: 80%;
+    }
+
+    .header--left a, .header--right a{
+        font-size: 18px;
+    }
+
+    .sticker{
+        height:100px;
+        width: 100px;
+        bottom: 20px;
+    }
+    
+    .sticker-rond{
+        height:100px;
+        width: 100px;
+    }
+    .sticker-text{
+        height:100px;
+        width: 100px;
+    }
+
+    #logo{
+        font-size: 18px;
+        letter-spacing: 0px;
+    }
+    
+    .header--left{
+        margin-left:10px;
+    }
+    
+    .header--right{
+        margin-right: 10px;
+    }
+
+}

@@ -1,0 +1,460 @@
+$backgroundColor1: rgb(10, 10, 10);
+$backgroundColor2: rgb(255, 210, 210);
+$textColorLight:#fff;
+$menu-link:#fff;
+$headerText: #fff;
+
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+html, 
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background:#000;
+    scrollbar-width: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: 'helvetica-medium';
+    src: url('/fonts/HelveticaNeue\ Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'telegraf';
+    src: url('../fonts/Telegraf-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cozi-azure';
+    src: url('../fonts/CosiAzure-Ultra.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes reveal {
+    0%   {opacity: 0;
+         transform: scale(1.1);   
+    }
+    50%  {opacity: 1;
+        transform: scale(1.1)
+    }
+    75%  {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1)
+    }
+  }
+
+@keyframes textreveal {
+    0%   {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    25%   {
+        opacity: 0;
+    }
+    50%   {
+        opacity: 1;
+    }
+    75%   {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes menu {
+    0%   {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    75% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes scroll {
+    0%   {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    75% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes rotate{
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Slide-in animation*/
+@keyframes fade-in {
+    from {opacity: 0; transform: translate(0px, 50px);}
+    to {opacity: 1;}
+}
+
+.fade-in-element {
+  animation: fade-in 1.4s;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translate(0px, 150px);
+  }
+/*Slide-in animation end*/
+
+.header{
+    width:100vw;
+    height:40px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    top:10px;
+    animation-name: menu;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    mix-blend-mode: difference;
+    pointer-events: auto;
+    font-family: telegraf;
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none!important;
+}
+
+#logo{
+//    color:white;
+//    opacity: 1;
+//    text-decoration: none!important;
+display: none;
+}
+
+.header--left{
+    margin-left:80px;
+}
+
+.header--right{
+    margin-right: 80px;
+}
+
+.header--logo{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0);
+    text-decoration: none!important;
+}
+
+.header--left a, .header--right a{
+    color:$headerText;
+    text-decoration: none!important;
+}
+
+.intro {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    text-transform: uppercase;
+    color: white;
+    z-index: 2;
+    opacity: 1;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+        p{
+            font-size: 60px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+}
+
+.intro>img{
+    width: 70%;
+    animation-name: textreveal;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+h1{
+    font-family: "cozi-azure";
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    animation-name: textreveal;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    line-height: 80%;
+    font-size: auto;
+    z-index: 2;
+}
+
+.sticker{
+    height:100px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.sticker-rond{
+    height:100px;
+    width: 100px;
+    position: absolute;
+    z-index: 3;
+}
+.sticker-text{
+    height:100px;
+    width: 100px;
+    position: absolute;
+    z-index: 4;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.display{
+    position: relative;
+    width:100%;
+    height: 170vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+        .display_img{
+            width: 50%;
+            height: auto;
+        }
+}
+
+.display_img-iphone{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.ftw{
+    width: 100%;
+}
+
+.img_text{
+    width: 50vw;
+    height: 100%;
+}
+
+.img_text{
+    width: 50vw;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height:auto;
+    margin-top: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.block {
+    width:33%;
+    padding-bottom: 25%;
+    background: grey;
+    filter: grayscale(.1);
+    opacity: 0;
+    transition: .5s;
+    background-position: top!important;
+    margin: 0 2% -2% 2%;
+    position: relative;
+    float: left;
+}
+
+.block-1 {
+    background: url("../img/Portail2.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-2 {
+    background: url("../img/Architexture.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-3 {
+    background: url("../img/LGSL.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-4 {
+    background: url("../img/LGSL2.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-5 {
+    background: url("../img/Pangram.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-6 {
+    background: url("../img/Newseum.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-7 {
+    background: url("../img/Pangram2.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-8 {
+    background: url("../img/Portail.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-9 {
+    background: url("../img/Skull.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-10 {
+    background: url("../img/Synesthesia.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-11 {
+    background: url("../img/pangram3.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+.block-12 {
+    background: url("../img/Skull\ Copy.webp") no-repeat 100% 100%;
+    background-size: contain;
+}
+
+
+.form{
+    position: relative;
+    height: 630px;
+    width: 100vw;
+    margin-top: 100px;
+    z-index: 4;
+}
+
+.input{
+    font-family: telegraf;
+}
+
+.section2{
+    background-color: rgb(0, 0, 0);
+    //height:500px;
+    width: 100vw;
+    color:rgb(184, 184, 184);
+    font-family: helvetica-medium;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-top: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block-start: 0em!important;
+    margin-block-end: 0em!important;
+}
+
+.section2 > h2, .section2 > p, .pres > p{
+    margin-block-start: 0em!important;
+    margin-block-end: 0em!important;
+}
+
+h2{
+    text-transform: uppercase;
+    font-family: telegraf;
+    text-align: center;
+    color:white;
+    line-height: 85%;
+    font-size: 10vw;
+}
+
+.section2>.graphic{
+    width: 100%;
+}
+
+p{
+    color:white;
+    opacity: 100%;
+}
+
+.palme{
+    margin-bottom: 10px;
+    margin-top: 30px;
+    height: 30px;
+}
+
+.pres{
+    font-size: 95px;
+    line-height: 200px;
+    margin-top: 150px;
+    text-align: left;
+    font-family: telegraf;
+    width: 80%;
+    font-weight: 400;
+}
+
