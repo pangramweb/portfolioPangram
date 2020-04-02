@@ -27,36 +27,50 @@
         <h1 id="intro" class="rellax" data-rellax-speed="-4"><span>DESIGN</span><span>DIGITAL</span></h1>
     </div>
 
-    <div class="section2">
+    <div class="portfolio grid-container" data-rellax-speed="-2">
+      <div class="grid-item headr">
+        <h2>2020</h2>
+      </div>
 
-        <div class="display rellax" data-rellax-speed="-1">
-          <div class="display_img hidden">
-            <picture class="display_img-iphone">
-              <source class="ftw hidden" srcset="/img/ftw.webp"/>
-              <img class="ftw hidden" src="/img/ftw.png" alt="ftw">
-            </picture>
-          </div>
-        </div>
+      <div class="grid-item titre">
+        <h2>Slide Scroll</h2>
+      </div>
 
-        <div class="display display1 rellax" data-rellax-speed="0">
-          <div class="display_img hidden">
-            <picture class="display_img-iphone">
-              <source class="ftw hidden" srcset="/img/covid-min.webp"/>
-              <img class="ftw hidden" src="/img/covid-min.jpg" alt="covid">
-            </picture>
-          </div>
-        </div>
+      <main class="grid-item main">
+        <div class="items">
+            <div class="item item1 hidden">
+              <picture class="item--img">
+                <source class="statue hidden" srcset="/img/covid-min.webp"/>
+                <img class="statue hidden" src="/img/covid-min.jpg" alt="covid">
+              </picture>
+            </div>
+            <div class="item item2 hidden">
+              <picture class="display_img-iphone">
+                <source class="ftw hidden" srcset="/img/ftw.webp"/>
+                <img class="ftw hidden" src="/img/ftw.png" alt="ftw">
+              </picture>
+            </div>
+            <div class="item item3 hidden">
+              <picture class="display_img-ipad">
+                <source class="hidden" srcset="/img/newseum.webp"/>
+                <img class="hidden" src="/img/newseum.png" alt="newseum">
+              </picture>
+            </div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+            <div class="item item7"></div>
+            <div class="item item8"></div>
+            <div class="item item9"></div>
+            <div class="item item10"></div>
+        </div> 
 
-        <div class="display display2 rellax" data-rellax-speed="1">
-          <div class="display_img hidden">
-            <picture class="display_img-ipad">
-              <source class="ftw hidden" srcset="/img/newseum.webp"/>
-              <img class="ftw hidden" src="/img/newseum.png" alt="newseum">
-            </picture>
-          </div>
-        </div>
-        
-        <h2 id="graphic" class="graphic hidden rellax" data-rellax-speed="0">Graphic &</br>Web design</h2>
+      </main>
+
+
+    <div class="section2" data-rellax-speed="-1">
+
+        <h2 id="graphic" class="graphic hidden">Graphic &</br>Web design</h2>
         <img src="/img/palme.webp" alt="palme" class="palme hidden">
         <p class="hidden">Site Internet — UI/UX</p>
         <p class="hidden">Logo©, Branding™</p>
@@ -71,26 +85,30 @@
             <p class="hidden">Maquettes de livres,</p>
             <p class="hidden">Affiches</p>
         </div>
+
+
+        <div class="form" id="contact">
+          <div class="form--wrap">
+              <form name="contact" method="POST" data-netlify="true">
+                  <p>
+                    <label class="hidden"><input type="text" name="name" placeholder="Votre Nom*" class="input" required/></label>   
+                  </p>
+                  <p>
+                    <label class="hidden"><input type="email" name="email" placeholder="Votre Email*" class="input" required/></label>
+                  </p>
+                  <p>
+                    <label class="message hidden"><textarea oninput="auto_grow(this)" name="message" placeholder="Votre Message*" required></textarea></label>
+                  </p>
+                  <p>
+                    <button class="submit hidden" type="submit">Envoyer</button>
+                  </p> 
+              </form>
+          </div>
+      </div>
     </div>
-    
-    <div class="form" id="contact">
-        <div class="form--wrap">
-            <form name="contact" method="POST" data-netlify="true">
-                <p>
-                  <label class="hidden"><input type="text" name="name" placeholder="Votre Nom*" class="input" required/></label>   
-                </p>
-                <p>
-                  <label class="hidden"><input type="email" name="email" placeholder="Votre Email*" class="input" required/></label>
-                </p>
-                <p>
-                  <label class="message hidden"><textarea oninput="auto_grow(this)" name="message" placeholder="Votre Message*" required></textarea></label>
-                </p>
-                <p>
-                  <button class="submit hidden" type="submit">Envoyer</button>
-                </p> 
-            </form>
-        </div>
-    </div>
+
+  
+
 
 
 <script>
@@ -105,6 +123,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 <script>
   let rellax = new Rellax('.rellax');
 </script>
+
 <script>
     fitty('#intro');
 </script>
@@ -117,6 +136,10 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
     $(".block").css("opacity", 0 + $(window).scrollTop() / 250);
   });
 </script>-->
+
+<script>
+</script>
+
 <script>
 (function() {
   var elements;
@@ -145,6 +168,38 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
   init();
   checkPosition();
 })();
+</script>
+
+
+<!--horizontal scroll-->
+<script>
+  const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
 </script>
 
 </body>

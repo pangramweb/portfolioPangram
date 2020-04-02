@@ -143,7 +143,6 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  cursor: default;
 }
 
 body {
@@ -152,12 +151,7 @@ body {
   height: 100%;
   width: 100%;
   background: #000;
-  scrollbar-width: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -203,10 +197,9 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: -1;
   text-transform: uppercase;
   color: white;
-  z-index: 2;
   opacity: 1;
   text-align: center;
   -webkit-margin-before: 0;
@@ -246,7 +239,7 @@ body {
           animation-timing-function: ease-in-out;
   line-height: 80%;
   font-size: auto;
-  z-index: 2;
+  z-index: 0;
 }
 
 #intro {
@@ -291,20 +284,23 @@ body {
       -ms-flex-pack: right;
           justify-content: right;
   position: absolute;
+  top: 120vh;
 }
 
 .display1 > .display_img {
   position: absolute;
   right: 10%;
+  margin-top: 100px;
 }
 
 .display2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 0px;
+  margin-top: 570px;
   height: auto;
-  margin-bottom: 0px;
+  margin-bottom: 210px;
+  top: 220px;
 }
 
 .display_img {
@@ -319,9 +315,8 @@ body {
           justify-content: center;
 }
 
-.display_img-iphone, .display_img-ipad {
+.display_img-iphone, .display_img-ipad, .display_img-artwork {
   height: 100%;
-  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,16 +326,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .display_img-ipad {
   width: 100%;
 }
 
-.ftw {
-  width: 100%;
+#iphone {
+  top: 650px;
+  left: 50px;
+  position: relative;
+  width: 1000px;
+}
+
+.artwork {
+  width: 400px;
 }
 
 .container {
@@ -416,6 +416,7 @@ h2 {
 }
 
 .section2 > .graphic {
+  padding-top: 150px;
   width: 100%;
 }
 
@@ -438,5 +439,185 @@ p {
   font-family: telegraf;
   width: 80%;
   font-weight: 400;
+}
+
+picture {
+  height: auto;
+}
+
+/*Portfolio*/
+@supports (display: grid) {
+  .active {
+    background: black;
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto;
+    background-color: black;
+        grid-template-areas: "main main main";
+  }
+  @media screen and (max-width: 500px) {
+    .grid-container {
+      -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
+      -ms-grid-rows: 0.3fr 1fr auto 1fr;
+          grid-template-rows: 0.3fr 1fr auto 1fr;
+          grid-template-areas: "main";
+    }
+  }
+  .grid-item {
+    color: black;
+    background: transparent;
+    padding: 3.5em 1em;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .headr {
+    background-color: #092a37;
+    grid-area: headr;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+  .headr h2 {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+    padding-top: 8px;
+  }
+  .titre {
+    color: white;
+    background-color: #f4fbfd;
+    grid-area: titre;
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+  }
+  .main {
+    color: black;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer {
+    background-color: #5bbce4;
+    grid-area: footer;
+    padding: 0.6em;
+  }
+  .items {
+    position: relative;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    will-change: transform;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    height: auto;
+  }
+  .active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    -webkit-transform: scale(0.94);
+            transform: scale(0.94);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: black;
+    height: 440px;
+    width: auto;
+    margin: 0 1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px 30px;
+  }
+  .item img {
+    height: 350px;
+    width: auto;
+  }
+  @media screen and (max-width: 500px) {
+    .item {
+      min-height: 200px;
+      min-width: 200px;
+    }
+  }
+  .item1 {
+    background-color: lavender;
+  }
+  .item2 {
+    background-color: #8844c7;
+  }
+  .item3 {
+    background-color: #f33838;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -87,7 +87,7 @@ html,
 body {
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
-    cursor: default;
+    //cursor: default;
 }
 
 body{
@@ -96,9 +96,10 @@ body{
     height: 100%;
     width: 100%;
     background:#000;
-    scrollbar-width: none;
-    user-select: none;
-    pointer-events: none;
+    scroll-behavior: smooth;
+    //scrollbar-width: none;
+    //user-select: none;
+    //pointer-events: none;
 }
 
 .header{
@@ -134,10 +135,9 @@ body{
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    z-index: -1;
     text-transform: uppercase;
     color: $textColorLight;
-    z-index: 2;
     opacity: 1;
     text-align: center;
     margin-block-start: 0;
@@ -159,7 +159,7 @@ body{
         animation-timing-function: ease-in-out;
         line-height: 80%;
         font-size: auto;
-        z-index: 2;
+        z-index: 0;
     }
 }
 
@@ -187,18 +187,21 @@ body{
 .display1{
     justify-content: right;
     position: absolute;
+    top:120vh;
 }
 
 .display1 > .display_img{
     position: absolute;
     right: 10%;
+    margin-top: 100px;
 }
 
 .display2{
     justify-content: center;
-    margin-top:0px;
+    margin-top:570px;
     height: auto;
-    margin-bottom: 0px;
+    margin-bottom: 210px;
+    top: 220px;
 }
 
 .display_img{
@@ -207,22 +210,28 @@ body{
     justify-content: center;
 }
 
-.display_img-iphone, .display_img-ipad{
+.display_img-iphone, .display_img-ipad, .display_img-artwork{
     height: 100%;
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .display_img-ipad{
     width: 100%;
 }
 
-.ftw{
-    width: 100%;
+
+#iphone{
+    top:650px;
+    left: 50px;
+    position: relative;
+    width: 1000px;
+}
+
+
+.artwork{
+    width: 400px;
 }
 
 .container {
@@ -278,6 +287,7 @@ h2{
 }
 
 .section2>.graphic{
+    padding-top: 150px;
     width: 100%;
 }
 
@@ -302,3 +312,150 @@ p{
     font-weight: 400;
 }
 
+picture{
+    height:auto;
+}
+
+/*Portfolio*/
+
+//ENABLE CSS GRID FOR LIFT OFF  🚀
+@supports(display: grid) {
+    .active {
+        background: black;
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        transform: scale(1);
+      }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      background-color: black;
+      //Let the craziness begin!!!
+      grid-template-areas:
+        "main main main";
+      @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr auto 1fr;
+        grid-template-areas: 
+          "main";
+      }
+    }
+  
+    .grid-item {
+      color: rgb(0, 0, 0);
+      background: transparent;
+      padding: 3.5em 1em;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    
+    .headr {
+      background-color: darken(skyblue, 60%);
+      grid-area: headr;
+      height:100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        h2{
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-top: 8px;
+        }
+    display: none;
+    }
+    
+    .titre {
+      color: white;
+      background-color: lighten(skyblue, 25%);
+      grid-area: titre;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+  
+    .main {
+      color: black;
+      //background-color: black;
+      grid-area: main;
+      padding: 0;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .footer {
+      background-color: darken(skyblue, 10%);
+      grid-area: footer;
+      padding: 0.6em;
+    }
+  
+    .items {
+      position: relative;
+      width: auto;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      transition: all 0.2s;
+      transition-delay: 0.1s;
+      transform: scale(1);
+      will-change: transform;
+      user-select: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      height: auto;
+    }
+  
+    .active {
+      //background: black;
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      transform: scale(0.94);
+      transition: all 0.2s;
+      transition-delay: 0.1s;
+    }
+  
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      height: 440px;
+      width: auto;
+      margin: 0 1em;
+      box-sizing: border-box;
+      //overflow: hidden;
+      padding:10px 30px;
+      img{
+          height: 350px;
+          width: auto;
+      }
+      @media screen and (max-width: 500px) {
+        min-height: 200px;
+        min-width: 200px;
+          }
+    }
+
+    .item1{
+        background-color: lavender;
+    }
+    
+    .item2{
+        background-color: rgb(136, 68, 199);
+        }
+
+
+    .item3{
+        background-color: rgb(243, 56, 56);
+    }
+
+  }
+  
