@@ -120,7 +120,7 @@ body{
     animation-timing-function: ease-in-out;
     pointer-events: auto;
     font-family: telegraf;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     text-decoration: none!important;
 }
@@ -258,9 +258,10 @@ body{
 
 .form{
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: 4;
+    overflow: hidden;
 }
 
 .input{
@@ -390,7 +391,7 @@ picture{
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 300px;
+      margin-top: 150px;
     }
     
     .footer {

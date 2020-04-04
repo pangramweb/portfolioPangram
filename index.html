@@ -103,7 +103,7 @@
                   <p>
                     <label class="message hidden"><textarea oninput="auto_grow(this)" name="message" placeholder="Votre Message*" required></textarea></label>
                   </p>
-                  <p>
+                  <p id="btn-submit">
                     <button class="submit hidden" type="submit">Envoyer</button>
                   </p> 
               </form>
@@ -188,9 +188,9 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
     function checkPosition() {
       for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
-        var positionFromTop = elements[i].getBoundingClientRect().bottom;
+        var positionFromTop = elements[i].getBoundingClientRect().top;
   
-        if (positionFromTop - windowHeight <= 50) {
+        if (positionFromTop - windowHeight <= 100) {
           element.classList.add('reveal-on');
           element.classList.remove('reveal');
         }

@@ -1,6 +1,6 @@
 form {
   background-color: black;
-  font-family: helvetica;
+  font-family: telegraf;
   color: blue;
   width: 100%;
   margin-top: 150px;
@@ -71,25 +71,25 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  font-family: helvetica;
+  font-family: telegraf;
   color: #4b4b4b;
   font-size: 20px;
 }
 
 :-ms-input-placeholder {
-  font-family: helvetica;
+  font-family: telegraf;
   color: #4b4b4b;
   font-size: 20px;
 }
 
 ::-ms-input-placeholder {
-  font-family: helvetica;
+  font-family: telegraf;
   color: #4b4b4b;
   font-size: 20px;
 }
 
 ::placeholder {
-  font-family: helvetica;
+  font-family: telegraf;
   color: #4b4b4b;
   font-size: 20px;
 }
@@ -97,42 +97,46 @@ textarea {
 input[type=text]:focus,
 input[type=email]:focus {
   color: white;
-  font-family: helvetica;
+  font-family: telegraf;
   font-size: 20px;
 }
 
 textarea:focus {
   color: white;
-  font-family: helvetica;
+  font-family: telegraf;
   font-size: 20px;
 }
 
 .input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
   color: #646464;
-  font-family: helvetica;
+  font-family: telegraf;
   font-size: 20px;
 }
 
 .input:hover:-ms-input-placeholder,
 textarea:hover:-ms-input-placeholder {
   color: #646464;
-  font-family: helvetica;
+  font-family: telegraf;
   font-size: 20px;
 }
 
 .input:hover::-ms-input-placeholder,
 textarea:hover::-ms-input-placeholder {
   color: #646464;
-  font-family: helvetica;
+  font-family: telegraf;
   font-size: 20px;
 }
 
 .input:hover::placeholder,
 textarea:hover::placeholder {
   color: #646464;
-  font-family: helvetica;
+  font-family: telegraf;
   font-size: 20px;
+}
+
+#btn-submit {
+  margin-bottom: 20px;
 }
 
 .submit {
