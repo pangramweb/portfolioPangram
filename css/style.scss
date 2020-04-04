@@ -78,10 +78,13 @@ $menuLinkDark:rgb(0, 0, 0);
   }
 /*Slide-in animation end*/
 
-
 ::-webkit-scrollbar {
     display: none;
   }
+
+html{
+    scroll-behavior: smooth;
+}
 
 html, 
 body {
@@ -115,7 +118,6 @@ body{
     animation-name: menu;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
-    mix-blend-mode: difference;
     pointer-events: auto;
     font-family: telegraf;
     font-size: 22px;
@@ -128,7 +130,17 @@ body{
     a{
         color:$menuLinkLight;
         text-decoration: none!important;
+        background-color: black;
+        border-radius: 20px;
     }
+}
+
+.header--left a{
+    padding: 8px 17px 8px 17px;
+}
+
+.header--right a{
+    padding: 8px 10px 8px 17px;
 }
 
 .section1 {
@@ -246,9 +258,8 @@ body{
 
 .form{
     position: relative;
-    height: 630px;
+    height: 100vh;
     width: 100vw;
-    margin-top: 100px;
     z-index: 4;
 }
 
@@ -287,7 +298,7 @@ h2{
 }
 
 .section2>.graphic{
-    padding-top: 150px;
+    padding-top: 500px;
     width: 100%;
 }
 
@@ -320,24 +331,16 @@ picture{
 
 //ENABLE CSS GRID FOR LIFT OFF  🚀
 @supports(display: grid) {
-    .active {
-        background: black;
-        cursor: grabbing;
-        cursor: -webkit-grabbing;
-        transform: scale(1);
-      }
 
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto 1fr auto;
-      background-color: black;
       //Let the craziness begin!!!
       grid-template-areas:
         "main main main";
       @media screen and (max-width: 500px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1fr auto 1fr;
         grid-template-areas: 
           "main";
       }
@@ -379,7 +382,6 @@ picture{
   
     .main {
       color: black;
-      //background-color: black;
       grid-area: main;
       padding: 0;
       overflow-x: scroll;
@@ -388,6 +390,7 @@ picture{
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 300px;
     }
     
     .footer {
@@ -403,11 +406,14 @@ picture{
       overflow-y: hidden;
       white-space: nowrap;
       transition: all 0.2s;
-      transition-delay: 0.1s;
+      transition-delay: 0s;
       transform: scale(1);
       will-change: transform;
       user-select: none;
-      cursor: pointer;
+      cursor: url("/img/openhand.svg") 8 8, auto;
+      cursor: url("/img/openhand.png") 0 0, pointer; /* Legacy */
+      cursor: url ("/img/openhand.svg") 8 8, pointer; /* FF */
+      cursor: -webkit-image-set (url ("/img/openhand.png") 1x, url ("/img/openhand@2x.png") 2x) 0 0, pointer; /* Webkit */
       display: flex;
       align-items: center;
       justify-content: left;
@@ -415,12 +421,13 @@ picture{
     }
   
     .active {
-      //background: black;
-      cursor: grabbing;
-      cursor: -webkit-grabbing;
-      transform: scale(0.94);
+      cursor: url("/img/closedhand.svg") 8 8, auto;
+      cursor: url("/img/closedhand.png") 0 0, pointer; /* Legacy */
+      cursor: url ("/img/closedhand.svg") 8 8, pointer; /* FF */
+      cursor: -webkit-image-set (url ("/img/closedhand.png") 1x, url ("/img/closedhand@2x.png") 2x) 0 0, pointer; /* Webkit */
+      transform: scale(1.05);
       transition: all 0.2s;
-      transition-delay: 0.1s;
+      transition-delay: 0s;
     }
   
     .item {
@@ -432,15 +439,18 @@ picture{
       width: auto;
       margin: 0 1em;
       box-sizing: border-box;
-      //overflow: hidden;
       padding:10px 30px;
       img{
           height: 350px;
           width: auto;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -o-user-select: none;
+          user-select: none;
       }
       @media screen and (max-width: 500px) {
         min-height: 200px;
-        min-width: 200px;
           }
     }
 
@@ -457,5 +467,31 @@ picture{
         background-color: rgb(243, 56, 56);
     }
 
+    .item4{
+        background-color: peachpuff;
+    }
+
+    .item5{
+        background-color: dodgerblue;
+    }
   }
-  
+
+  .reveal::before{
+    content:'';
+    position: absolute;
+    height:100%;
+    width: 100%;
+    background-color: black;
+    top:0px;
+  }
+
+  .reveal-on::before{
+    content:'';
+    position: absolute;
+    height:0%;
+    width: 100%;
+    background-color: black;
+    transition: ease-in-out;
+    transition-duration: 500ms;
+    top:0px;
+}

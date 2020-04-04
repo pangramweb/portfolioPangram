@@ -27,7 +27,7 @@
         <h1 id="intro" class="rellax" data-rellax-speed="-4"><span>DESIGN</span><span>DIGITAL</span></h1>
     </div>
 
-    <div class="portfolio grid-container" data-rellax-speed="-2">
+    <div class="portfolio grid-container">
       <div class="grid-item headr">
         <h2>2020</h2>
       </div>
@@ -36,25 +36,33 @@
         <h2>Slide Scroll</h2>
       </div>
 
-      <main class="grid-item main">
+      <main class="grid-item main rellax" data-rellax-speed="-3">
         <div class="items">
-            <div class="item item1 hidden">
+            <div class="item item1 reveal">
               <picture class="item--img">
-                <img class="statue hidden" src="/img/covid-min.jpg" alt="covid">
+                <img class="statue" src="/img/covid-min.jpg" alt="covid" draggable="false">
               </picture>
             </div>
-            <div class="item item2 hidden">
+            <div class="item item2 reveal">
               <picture class="display_img-iphone">
-                <img class="ftw hidden" src="/img/ftw.png" alt="ftw">
+                <img class="ftw" src="/img/ftw.png" alt="ftw" draggable="false">
               </picture>
             </div>
-            <div class="item item3 hidden">
+            <div class="item item3 reveal">
               <picture class="display_img-ipad">
-                <img class="hidden" src="/img/newseum.png" alt="newseum">
+                <img class="" src="/img/newseum.png" alt="newseum" draggable="false">
               </picture>
             </div>
-            <div class="item item4"></div>
-            <div class="item item5"></div>
+            <div class="item item4 reveal">
+              <picture class="display_img-ipad">
+                <img class="" src="/img/portail.jpg" alt="portail" draggable="false">
+              </picture>
+            </div>
+            <div class="item item5 reveal">
+              <picture class="display_img-ipad">
+                <img class="" src="/img/lgsl.jpg" alt="lgsl" draggable="false">
+              </picture>
+            </div>
             <div class="item item6"></div>
             <div class="item item7"></div>
             <div class="item item8"></div>
@@ -63,9 +71,9 @@
         </div> 
 
       </main>
+    </div>
 
-
-    <div class="section2" data-rellax-speed="-1">
+    <div class="section2">
 
         <h2 id="graphic" class="graphic hidden">Graphic &</br>Web design</h2>
         <img src="/img/palme.webp" alt="palme" class="palme hidden">
@@ -82,7 +90,6 @@
             <p class="hidden">Maquettes de livres,</p>
             <p class="hidden">Affiches</p>
         </div>
-
 
         <div class="form" id="contact">
           <div class="form--wrap">
@@ -101,7 +108,8 @@
                   </p> 
               </form>
           </div>
-      </div>
+        </div>
+
     </div>
 
   
@@ -134,9 +142,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 </script>-->
 
-<script>
-</script>
 
+<!-- Slide in animation script-->
 <script>
 (function() {
   var elements;
@@ -167,6 +174,36 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 })();
 </script>
 
+<!-- Reveal animation script-->
+<script>
+  (function() {
+    var elements;
+    var windowHeight;
+  
+    function init() {
+      elements = document.querySelectorAll('.reveal');
+      windowHeight = window.innerHeight;
+    }
+  
+    function checkPosition() {
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var positionFromTop = elements[i].getBoundingClientRect().bottom;
+  
+        if (positionFromTop - windowHeight <= 50) {
+          element.classList.add('reveal-on');
+          element.classList.remove('reveal');
+        }
+      }
+    }
+  
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
+  
+    init();
+    checkPosition();
+  })();
+</script>
 
 <!--horizontal scroll-->
 <script>
