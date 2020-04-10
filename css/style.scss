@@ -28,19 +28,23 @@ $menuLinkDark:rgb(0, 0, 0);
 }
 
 @keyframes textreveal {
-    0%   {
+    0% {
         opacity: 0;
         transform: scale(1.1);
     }
-    25%   {
+
+    25% {
         opacity: 0;
     }
-    50%   {
+
+    50% {
         opacity: 1;
     }
-    75%   {
+
+    75% {
         transform: scale(1.1);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -48,14 +52,16 @@ $menuLinkDark:rgb(0, 0, 0);
 }
 
 @keyframes menu {
-    0%   {
+    0% {
         opacity: 0;
         transform: translate(0, -100px);
     }
+
     75% {
         opacity: 0;
         transform: translate(0, -100px);
     }
+
     100% {
         opacity: 1;
         transform: translate(0, 0px);
@@ -64,57 +70,64 @@ $menuLinkDark:rgb(0, 0, 0);
 
 /*Slide-in animation*/
 @keyframes fade-in {
-    from {opacity: 0; transform: translate(0px, 50px);}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .fade-in-element {
-  animation: fade-in 1.4s;
+    animation: fade-in 1.4s;
 }
 
 .hidden {
     opacity: 0;
     transform: translate(0px, 150px);
-  }
+}
+
 /*Slide-in animation end*/
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-html, 
+html,
 body {
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     //cursor: default;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background:#000;
+    background: #fff;
     scroll-behavior: smooth;
     //scrollbar-width: none;
     //user-select: none;
     //pointer-events: none;
 }
 
-.header{
-    width:100vw;
-    height:40px;
+.header {
+    width: 100vw;
+    height: 40px;
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     z-index: 999;
-    top:10px;
+    top: 10px;
     animation-name: menu;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
@@ -122,24 +135,26 @@ body{
     font-family: telegraf;
     font-size: 18px;
     font-weight: 400;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-.header--left, .header--right{
-    margin:0px 80px 0px 80px;
-    a{
-        color:$menuLinkLight;
-        text-decoration: none!important;
+.header--left,
+.header--right {
+    margin: 0px 80px 0px 80px;
+
+    a {
+        color: $menuLinkLight;
+        text-decoration: none !important;
         background-color: black;
         border-radius: 20px;
     }
 }
 
-.header--left a{
+.header--left a {
     padding: 8px 17px 8px 17px;
 }
 
-.header--right a{
+.header--right a {
     padding: 8px 10px 8px 17px;
 }
 
@@ -158,7 +173,8 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    h1{
+
+    h1 {
         font-family: "cozi-azure";
         text-transform: uppercase;
         font-weight: 500;
@@ -175,88 +191,91 @@ body{
     }
 }
 
-#intro{
-    display: flex!important;
+#intro {
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.display{
+.display {
     position: relative;
-    width:100%;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: left;
     z-index: 2;
-        .display_img{
-            width: 50%;
-            height: auto;
-        }
+
+    .display_img {
+        width: 50%;
+        height: auto;
+    }
 }
 
-.display1{
+.display1 {
     justify-content: right;
     position: absolute;
-    top:120vh;
+    top: 120vh;
 }
 
-.display1 > .display_img{
+.display1>.display_img {
     position: absolute;
     right: 10%;
     margin-top: 100px;
 }
 
-.display2{
+.display2 {
     justify-content: center;
-    margin-top:570px;
+    margin-top: 570px;
     height: auto;
     margin-bottom: 210px;
     top: 220px;
 }
 
-.display_img{
+.display_img {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.display_img-iphone, .display_img-ipad, .display_img-artwork{
+.display_img-iphone,
+.display_img-ipad,
+.display_img-artwork {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.display_img-ipad{
+.display_img-ipad {
     width: 100%;
 }
 
 
-#iphone{
-    top:650px;
+#iphone {
+    top: 650px;
     left: 50px;
     position: relative;
     width: 1000px;
 }
 
 
-.artwork{
+.artwork {
     width: 400px;
 }
 
 .container {
     position: relative;
     width: 100vw;
-    height:auto;
+    height: auto;
     margin-top: 300px;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.form{
+.form {
     position: relative;
     height: 100%;
     width: 100vw;
@@ -264,14 +283,14 @@ body{
     overflow: hidden;
 }
 
-.input{
+.input {
     font-family: telegraf;
 }
 
-.section2{
+.section2 {
     background-color: rgb(0, 0, 0);
     width: 100vw;
-    color:rgb(184, 184, 184);
+    color: rgb(184, 184, 184);
     font-family: helvetica-medium;
     font-size: 20px;
     padding-left: 0px;
@@ -279,42 +298,44 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-block-start: 0em!important;
-    margin-block-end: 0em!important;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
     z-index: 2;
 }
 
-.section2 > h2, .section2 > p, .pres > p{
-    margin-block-start: 0em!important;
-    margin-block-end: 0em!important;
+.section2>h2,
+.section2>p,
+.pres>p {
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
 }
 
-h2{
+h2 {
     text-transform: uppercase;
     font-family: telegraf;
     text-align: center;
-    color:white;
+    color: white;
     line-height: 85%;
     font-size: 10vw;
 }
 
-.section2>.graphic{
+.section2>.graphic {
     padding-top: 500px;
     width: 100%;
 }
 
-p{
-    color:white;
+p {
+    color: white;
     opacity: 100%;
 }
 
-.palme{
+.palme {
     margin-bottom: 10px;
     margin-top: 30px;
     height: 30px;
 }
 
-.pres{
+.pres {
     font-size: 95px;
     line-height: 200px;
     margin-top: 150px;
@@ -324,8 +345,8 @@ p{
     font-weight: 400;
 }
 
-picture{
-    height:auto;
+picture {
+    height: auto;
 }
 
 /*Portfolio*/
@@ -334,165 +355,176 @@ picture{
 @supports(display: grid) {
 
     .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto 1fr auto;
-      //Let the craziness begin!!!
-      grid-template-areas:
-        "main main main";
-      @media screen and (max-width: 500px) {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-          "main";
-      }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        //Let the craziness begin!!!
+        grid-template-areas:
+            "main main main";
+
+        @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "main";
+        }
     }
-  
+
     .grid-item {
-      color: rgb(0, 0, 0);
-      background: transparent;
-      padding: 3.5em 1em;
-      font-size: 1em;
-      font-weight: 700;
+        color: rgb(0, 0, 0);
+        background: transparent;
+        padding: 3.5em 1em;
+        font-size: 1em;
+        font-weight: 700;
     }
-    
+
     .headr {
-      background-color: darken(skyblue, 60%);
-      grid-area: headr;
-      height:100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-        h2{
+        background-color: darken(skyblue, 60%);
+        grid-area: headr;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
             margin-block-start: 0;
             margin-block-end: 0;
             padding-top: 8px;
         }
-    display: none;
-    }
-    
-    .titre {
-      color: white;
-      background-color: lighten(skyblue, 25%);
-      grid-area: titre;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      display: none;
-    }
-  
-    .main {
-      color: black;
-      grid-area: main;
-      padding: 0;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 150px;
-    }
-    
-    .footer {
-      background-color: darken(skyblue, 10%);
-      grid-area: footer;
-      padding: 0.6em;
-    }
-  
-    .items {
-      position: relative;
-      width: auto;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      white-space: nowrap;
-      transition: all 0.2s;
-      transition-delay: 0s;
-      transform: scale(1);
-      will-change: transform;
-      user-select: none;
-      cursor: url("/img/openhand.svg") 8 8, auto;
-      cursor: url("/img/openhand.png") 0 0, pointer; /* Legacy */
-      cursor: url ("/img/openhand.svg") 8 8, pointer; /* FF */
-      cursor: -webkit-image-set (url ("/img/openhand.png") 1x, url ("/img/openhand@2x.png") 2x) 0 0, pointer; /* Webkit */
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      height: auto;
-    }
-  
-    .active {
-      cursor: url("/img/closedhand.svg") 8 8, auto;
-      cursor: url("/img/closedhand.png") 0 0, pointer; /* Legacy */
-      cursor: url ("/img/closedhand.svg") 8 8, pointer; /* FF */
-      cursor: -webkit-image-set (url ("/img/closedhand.png") 1x, url ("/img/closedhand@2x.png") 2x) 0 0, pointer; /* Webkit */
-      transform: scale(1.05);
-      transition: all 0.2s;
-      transition-delay: 0s;
-    }
-  
-    .item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgb(0, 0, 0);
-      height: 440px;
-      width: auto;
-      margin: 0 1em;
-      box-sizing: border-box;
-      padding:10px 30px;
-      img{
-          height: 350px;
-          width: auto;
-          -webkit-user-select: none;
-          -khtml-user-select: none;
-          -moz-user-select: none;
-          -o-user-select: none;
-          user-select: none;
-      }
-      @media screen and (max-width: 500px) {
-        min-height: 200px;
-          }
+
+        display: none;
     }
 
-    .item1{
-        background-color: lavender;
+    .titre {
+        color: white;
+        background-color: lighten(skyblue, 25%);
+        grid-area: titre;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
     }
-    
-    .item2{
-        background-color: rgb(136, 68, 199);
+
+    .main {
+        color: black;
+        grid-area: main;
+        padding: 0;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+    }
+
+    .footer {
+        background-color: darken(skyblue, 10%);
+        grid-area: footer;
+        padding: 0.6em;
+    }
+
+    .items {
+        position: relative;
+        width: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transition-delay: 0s;
+        transform: scale(1);
+        will-change: transform;
+        user-select: none;
+        cursor: url("/img/openhand.svg") 8 8, auto;
+        cursor: url("/img/openhand.png") 0 0, pointer;
+        /* Legacy */
+        cursor: url ("/img/openhand.svg") 8 8, pointer;
+        /* FF */
+        cursor: -webkit-image-set (url ("/img/openhand.png") 1x, url ("/img/openhand@2x.png") 2x) 0 0, pointer;
+        /* Webkit */
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        height: auto;
+    }
+
+    .active {
+        cursor: url("/img/closedhand.svg") 8 8, auto;
+        cursor: url("/img/closedhand.png") 0 0, pointer;
+        /* Legacy */
+        cursor: url ("/img/closedhand.svg") 8 8, pointer;
+        /* FF */
+        cursor: -webkit-image-set (url ("/img/closedhand.png") 1x, url ("/img/closedhand@2x.png") 2x) 0 0, pointer;
+        /* Webkit */
+        transform: scale(1.05);
+        transition: all 0.2s;
+        transition-delay: 0s;
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        height: 440px;
+        width: auto;
+        margin: 0 1em;
+        box-sizing: border-box;
+        padding: 10px 30px;
+
+        img {
+            height: 350px;
+            width: auto;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
         }
 
+        @media screen and (max-width: 500px) {
+            min-height: 200px;
+        }
+    }
 
-    .item3{
+    .item1 {
+        background-color: lavender;
+    }
+
+    .item2 {
+        background-color: rgb(136, 68, 199);
+    }
+
+
+    .item3 {
         background-color: rgb(243, 56, 56);
     }
 
-    .item4{
+    .item4 {
         background-color: peachpuff;
     }
 
-    .item5{
+    .item5 {
         background-color: dodgerblue;
     }
-  }
+}
 
-  .reveal::before{
-    content:'';
+.reveal::before {
+    content: '';
     position: absolute;
-    height:100%;
+    height: 100%;
     width: 100%;
     background-color: black;
-    top:0px;
-  }
+    top: 0px;
+}
 
-  .reveal-on::before{
-    content:'';
+.reveal-on::before {
+    content: '';
     position: absolute;
-    height:0%;
+    height: 0%;
     width: 100%;
     background-color: black;
     transition: ease-in-out;
     transition-duration: 500ms;
-    top:0px;
+    top: 0px;
 }
