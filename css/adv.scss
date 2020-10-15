@@ -1,0 +1,29 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.logo-container{
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-svg{
+    width: 200px;
+}
+
+.logo-svg path{
+    fill: transparent;
+    stroke: 10;
+    stroke: rgb(255, 2, 2);
+}
