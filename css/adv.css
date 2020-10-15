@@ -4,21 +4,15 @@
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: black;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .logo-container {
   position: relative;
-  width: 800px;
+  height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,11 +26,220 @@ body {
 
 .logo-svg {
   width: 200px;
+  -webkit-animation: scale 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+          animation: scale 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .logo-svg path {
-  fill: transparent;
-  stroke: 10;
-  stroke: #ff0202;
+  fill: white;
+  stroke-width: 0px;
+  stroke: white;
+  stroke-dasharray: 2000;
+  opacity: 10;
+  -webkit-animation: animate 2.2s cubic-bezier(0, 0.5, 1, 0.1);
+          animation: animate 2.2s cubic-bezier(0, 0.5, 1, 0.1);
+}
+
+@-webkit-keyframes scale {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    stroke-width: 10px;
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1100;
+    stroke: white;
+  }
+  20% {
+    opacity: 100;
+    fill: none;
+  }
+  21% {
+    opacity: 100;
+    fill: none;
+  }
+  39% {
+    fill: rgba(255, 255, 255, 0.01);
+  }
+  49% {
+    stroke-width: 10px;
+  }
+  50% {
+    opacity: 100;
+    fill: white;
+    stroke-dashoffset: 200;
+    stroke-width: 0px;
+  }
+  90% {
+    stroke: white;
+    fill: white;
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes animate {
+  0% {
+    stroke-width: 10px;
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1100;
+    stroke: white;
+  }
+  20% {
+    opacity: 100;
+    fill: none;
+  }
+  21% {
+    opacity: 100;
+    fill: none;
+  }
+  39% {
+    fill: rgba(255, 255, 255, 0.01);
+  }
+  49% {
+    stroke-width: 10px;
+  }
+  50% {
+    opacity: 100;
+    fill: white;
+    stroke-dashoffset: 200;
+    stroke-width: 0px;
+  }
+  90% {
+    stroke: white;
+    fill: white;
+    opacity: 100;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0px;
+  background: #080808;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transform: translate(0%, 100%);
+          transform: translate(0%, 100%);
+  -webkit-animation: slidein 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          animation: slidein 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    -webkit-transform: translate(0%, 100%);
+            transform: translate(0%, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes slidein {
+  0% {
+    -webkit-transform: translate(0%, 100%);
+            transform: translate(0%, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+.typo {
+  position: relative;
+  height: 600px;
+  width: 600px;
+  fill: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.typo svg, .typo p {
+  opacity: 0;
+  -webkit-animation: textSlideIn 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+          animation: textSlideIn 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+
+.typo p {
+  color: white;
+  font-size: 20px;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+@-webkit-keyframes textSlideIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.logo-pres {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
 }
 /*# sourceMappingURL=adv.css.map */
