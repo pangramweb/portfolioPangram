@@ -1,270 +1,247 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@font-face{
+  font-family: "Roslindale";
+  src: url(/fonts/RoslindaleDisplayCondensed-Bold.otf);
 }
 
-body {
-  background-color: black;
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background-color: rgba(8, 8, 8, 1);
+}
+
+section{
   height: 100vh;
-  overflow-x: hidden;
-  margin: 0;
 }
 
-.logo-container {
+section > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.anim{
+  overflow: hidden;
+}
+
+.animwrap{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.logo, .typo{
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  position: fixed;
+  background-color: black;
+}
+
+.typo{
   position: relative;
   height: 100vh;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 600px;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.logo-svg {
-  width: 200px;
-  -webkit-animation: scale 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
-          animation: scale 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
-.logo-svg path {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  animation: typoSlide 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: 1.7s;
+  background-color: rgba(8, 8, 8, 1);
   fill: white;
+}
+
+@keyframes typoSlide{
+  0%{
+    opacity: 1;
+    transform:translate(0%, 100%);
+  }
+
+  100%{
+    opacity: 1;
+    transform:translate(0%, 0%);
+  }
+}
+
+.display-wrap{
+  height: 100%;
+  padding: 100px 90px;
+}
+
+.two{
+  background-color: rgba(8, 8, 8, 1);
+  color:white;
+  font-family: 'Helvetica';
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.display{
+  height:400px;
+  background-color: transparent;
+  margin: 20px;
+}
+
+.display img{
+  width: 100%;
+}
+
+.three{
+  background-color: rgba(8, 8, 8, 1);
+}
+
+
+.logo-svg{
+  width: 140px;
+  transform: scale(1.2, 1.2);
+  animation: scale .8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-delay: 1.8s;
+}
+
+.logo-svg path{
+  fill: none;
   stroke-width: 0px;
-  stroke: white;
+  stroke:white;
   stroke-dasharray: 2000;
   opacity: 10;
-  -webkit-animation: animate 2.2s cubic-bezier(0, 0.5, 1, 0.1);
-          animation: animate 2.2s cubic-bezier(0, 0.5, 1, 0.1);
-}
-
-@-webkit-keyframes scale {
-  0% {
-    width: 200px;
-  }
-  100% {
-    width: 150px;
-  }
+  animation: animate 2.2s cubic-bezier(0,.50,1,.1) forwards;
 }
 
 @keyframes scale {
-  0% {
-    width: 200px;
+  0%{
+      transform:scale(1.2, 1.2); 
   }
-  100% {
-    width: 150px;
-  }
-}
 
-@-webkit-keyframes animate {
-  0% {
-    stroke-width: 10px;
-    opacity: 0;
-    fill: none;
-    stroke-dashoffset: 1100;
-    stroke: white;
-  }
-  20% {
-    opacity: 100;
-    fill: none;
-  }
-  21% {
-    opacity: 100;
-    fill: none;
-  }
-  39% {
-    fill: rgba(255, 255, 255, 0.01);
-  }
-  49% {
-    stroke-width: 10px;
-  }
-  50% {
-    opacity: 100;
-    fill: white;
-    stroke-dashoffset: 200;
-    stroke-width: 0px;
-  }
-  90% {
-    stroke: white;
-    fill: white;
-    opacity: 100;
-  }
-  100% {
-    opacity: 100;
+  100%{
+      transform: scale(1, 1);
   }
 }
 
 @keyframes animate {
-  0% {
-    stroke-width: 10px;
-    opacity: 0;
-    fill: none;
-    stroke-dashoffset: 1100;
-    stroke: white;
+  0%{
+      stroke-width: 10px;
+      opacity: 0;
+      fill: none;
+      stroke-dashoffset: 1100;
+      stroke: white;
   }
-  20% {
-    opacity: 100;
-    fill: none;
+
+  20%{
+      opacity: 100;
+      fill: none;
   }
-  21% {
-    opacity: 100;
-    fill: none;
+
+  21%{
+      opacity: 100;
+      fill:none;
   }
-  39% {
-    fill: rgba(255, 255, 255, 0.01);
+
+  39%{
+      fill: rgba(255, 255, 255, .01);
   }
-  49% {
-    stroke-width: 10px;
+
+  49%{
+      stroke-width: 10px;
   }
-  50% {
-    opacity: 100;
-    fill: white;
-    stroke-dashoffset: 200;
-    stroke-width: 0px;
+
+  50%{
+      opacity: 100;
+      fill: rgba(255, 255, 255, 1);
+      stroke-dashoffset: 200;
+      stroke-width: 0px;
   }
-  90% {
-    stroke: white;
-    fill: white;
-    opacity: 100;
+
+  90%{
+      stroke: white;
+      fill: white;
+      opacity: 100;
   }
-  100% {
-    opacity: 100;
+
+  100%{
+      opacity: 100;
+      fill: white;
   }
+
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0px;
-  background: #080808;
-  height: 100vh;
-  width: 100vw;
-  -webkit-transform: translate(0%, 100%);
-          transform: translate(0%, 100%);
-  -webkit-animation: slidein 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-          animation: slidein 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@-webkit-keyframes slidein {
-  0% {
-    -webkit-transform: translate(0%, 100%);
-            transform: translate(0%, 100%);
-  }
-  100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
-@keyframes slidein {
-  0% {
-    -webkit-transform: translate(0%, 100%);
-            transform: translate(0%, 100%);
-  }
-  100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
-.typo {
-  position: relative;
-  height: 600px;
+.typo-svg{
   width: 600px;
-  fill: white;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 40px;
 }
 
-.typo svg, .typo p {
+.typo svg{
   opacity: 0;
-  -webkit-animation: textSlideIn 0.7s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-          animation: textSlideIn 0.7s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
+  animation: opacity-in .9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: 2.8s;
 }
 
-.typo p {
+@keyframes opacity-in {
+  0%{
+      opacity: 0;
+
+  }
+
+  20%{
+      opacity: 0;
+  }
+
+  100%{
+      opacity: 100;
+
+  }
+}
+
+
+.color{
+  height: 400px;
+  width: 240px;
+}
+
+.color1{
+  background-color: white;
+}
+
+.color2{
+  background-color: #FFE4C9;
+}
+
+.color3{
+  background-color: #8D5D2C;
+}
+
+.color4{
+  background-color: #AE391A;
+}
+
+
+.typography{
+  font-family: 'Roslindale';
   color: white;
-  font-size: 20px;
-  font-family: Helvetica;
-  text-transform: uppercase;
-  padding-top: 50px;
+  font-size: 4em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
 }
 
-@-webkit-keyframes textSlideIn {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
+.info{
+  font-size: 16px;
 }
 
-@keyframes textSlideIn {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
+.display-mockup{
+  height: 400px;
 }
 
-section {
-  height: 100vh;
-  padding: 8em;
-  color: white;
-}
 
-section h1 {
-  font-size: 3em;
+.last{
+  height: 400px;
 }
-
-section p {
-  font-size: 1.5em;
-}
-
-section:first-child {
-  background: #080808;
-}
-
-section:last-child {
-  background: #080808;
-}
-/*# sourceMappingURL=adv.css.map */

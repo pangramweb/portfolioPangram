@@ -23,8 +23,10 @@ html.has-scroll-smooth {
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0; }
+    
     .c-scrollbar:hover {
       transform: scaleX(1.45); }
+
     .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
       opacity: 1; }
   
