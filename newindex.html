@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Arbre du Voyageur</title>
+    <link rel="stylesheet" href="/css/newindex.css">
+    <link rel="stylesheet" href="/css/locomotive-min.css">
+</head>
+<body translate="no">
+
+    <div class="smooth-scroll" data-scroll-container>
+      <section class="anim" data-scroll-section>
+        <div class="animwrap">
+          <div class="logo">
+
+
+
+          </div>
+
+          <div class="typo">
+            <div class="typo-svg" data-scroll data-scroll-speed="2" data-scroll-delay="1">
+
+                <lottie-player id="buste" src="https://assets2.lottiefiles.com/packages/lf20_r9zlrjkp.json" background="transparent" style="width: 600px; height: 600px;"></lottie-player>
+
+            </div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="scroll-direction" data-scroll-section class="display-wrap">
+        <div class="two">
+          <p data-scroll data-scroll-speed="1">IDENTITÉ VISUELLE 2020</p>
+          <p data-scroll data-scroll-speed="1">1. LOGO</p>
+        </div>
+        <div class="display-logo">
+          <div class="display display-1" data-scroll data-scroll-speed="4">
+            <img src="/img/lgn.png" alt="logo noir">
+          </div>
+          <div class="display display-2" data-scroll data-scroll-speed="4">
+            <img src="/img/lgb.png" alt="logo beige">
+          </div>
+          <div class="display display-3" data-scroll data-scroll-speed="4">
+            <img src="/img/lgne.png" alt="logo noir - étiquette">
+          </div>
+          <div class="display display-4" data-scroll data-scroll-speed="4">
+            <img src="/img/lgbe.png" alt="logo beige - étiquette">
+          </div>
+        </div>
+      </section>
+
+      <section id="scroll-direction" data-scroll-section class="display-wrap">
+        <div class="two">
+          <p data-scroll data-scroll-speed="1">IDENTITÉ VISUELLE 2020</p>
+          <p data-scroll data-scroll-speed="1">2. Couleurs</p>
+        </div>
+        <div class="display-logo">
+          <div class="display display-1" data-scroll data-scroll-speed="4">
+            <div class="color color1"></div>
+          </div>
+          <div class="display display-2" data-scroll data-scroll-speed="4">
+            <div class="color color2"></div>
+          </div>
+          <div class="display display-3" data-scroll data-scroll-speed="4">
+            <div class="color color3"></div>
+          </div>
+          <div class="display display-4" data-scroll data-scroll-speed="4">
+            <div class="color color4"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scroll-direction" data-scroll-section class="display-wrap">
+        <div class="two">
+          <p data-scroll data-scroll-speed="1">IDENTITÉ VISUELLE 2020</p>
+          <p data-scroll data-scroll-speed="1">3. Typographie</p>
+        </div>
+        <div class="typography">
+          <p data-scroll data-scroll-speed="4">
+            Aa Bb Cc Dd Ee Ff Gg Hh Ii
+          </p>
+          <p data-scroll data-scroll-speed="4">
+            Jj Kk Ll Mm Nn Oo Pp Qq Rr
+          </p>
+          <p data-scroll data-scroll-speed="4">
+            Ss Tt Uu Vv Ww Xx Yy Zz
+          </p>
+        </div>
+      </section>
+
+
+    </div>
+
+
+
+    <!--<script type="text/javascript" src="/js/locomotive.min.js"></script>-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+    <script>
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector(".smooth-scroll"),
+        smooth:true
+      });
+
+    </script>
+
+<script>
+    LottieInteractivity.create({
+      mode:"scroll",
+      player:'#buste',
+      actions: [
+        {
+          visibility: [0.5,1],
+          type: "seek",
+          frames: [0, 50]
+        }
+      ]  
+    });
+    </script>
+</body>
+</html>
